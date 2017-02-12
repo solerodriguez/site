@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background: url(backheader.jpg);
+    background: url(/site/backheader.jpg);
     background-size: cover!important;
     background-position: center top;
     position: relative;
@@ -84,7 +84,7 @@ header {
 }
 #memories {
     margin: 0 auto;
-    background: url(backanalog.jpg);
+    background: url(/site/backanalog.jpg);
     background-size: cover!important;
     background-position: center top;
     position: relative;
