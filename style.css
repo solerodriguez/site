@@ -6,10 +6,10 @@ body {
 
 header {
     background: url(backheader.jpg);
-    background-size: cover!important;
+    background-size: cover;
     background-position: center top;
     position: relative;
-    height: 100vh;
+    height: 90vh;
 }
 
 #title {
@@ -50,6 +50,11 @@ header {
     display: inline-block;
     text-align: left;
     padding: 5px 45px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .submenu {
