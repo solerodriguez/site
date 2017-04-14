@@ -90,6 +90,7 @@ a {
     line-height: 2em;
     padding: 15px 130px;
 }
+
 #memories {
     margin: 0 auto;
     background: url(backanalog.jpg);
@@ -111,15 +112,11 @@ a {
 }
 
 .instagram {
-    background: url(instagram.jpg);
+    background: url(instagram.gif);
     background-position: center top;
-    background-size: 80px 80px;
+    background-size: 60px 60px;
     background-repeat: no-repeat;
     position: relative;
     height: 80px;
-    margin-top: 40px;
-}
-
-#footer {
-    margin-bottom: 150px;
+    margin-top: 10px;
 }
