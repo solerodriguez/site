@@ -58,18 +58,30 @@ a {
 }
 
 .submenu {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 11px;
-    margin-top: 40px;
+    font-family: 'Montserrat', arial, sans-serif;
+    letter-spacing: 3px;
+    line-height: 1.6;
 }
-.submenu li {
-    padding: 0px 45px;
+
+.submenu button {
+    padding: 11px 23px;
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    border: solid 2px;
+    font-size: 11px;
+    font-family: 'Montserrat', arial, sans-serif;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 5px 5px;
 }
 
 .section {
     padding: 65px 15px;
-}
-#portfolio {
-    height: 100vh;
 }
 
 #portfolio_title {
@@ -119,4 +131,53 @@ a {
     position: relative;
     height: 80px;
     margin-top: 10px;
+}
+
+/*mixitup styles */
+.control:hover {
+    background: #edf4f4;
+    color: #333
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+.mix img {
+    width: 300px;
+    padding: 5px 20px;
+
+}
+.mix, .gap {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mix {
+    background: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.mix:before {
+    display: inline-grid;
+}
+
+/* 2 Columns */
+.mix, .gap {
+    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+}
+
+/* 3 Columns */
+@media screen and (min-width: 541px) {
+    .mix, .gap {
+        width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+    }
+}
+
+/* 4 Columns */
+@media screen and (min-width: 961px) {
+    .mix, .gap {
+        width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
+    }
 }
