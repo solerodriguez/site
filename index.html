@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<html lang="es-AR" prefix="og: http://ogp.me/ns#">
     <head>
         <title>Sole Rodriguez</title>
         <meta charset="UTF-8" />
@@ -24,9 +24,17 @@
         <link rel='stylesheet' id='my-css'  href='style.css' type='text/css' media='all' />
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="icon" type="image/png" href="img/favicon.png">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="js/swipebox.ios-orientationchange-fix.js"></script>
-        <script src="js/jquery.swipebox.min.js"></script>
+        <script>
+            var allExibits = ['food', 'fashion', 'project'];
+            function showOnly(exibitId) {
+                document.getElementById(exibitId + '-exibit').style.display = "block";
+                for (var i in allExibits) {
+                  if (allExibits[i] !== exibitId) {
+                    document.getElementById(allExibits[i] + '-exibit').style.display = "none"; 
+                  }
+                }
+            }
+        </script>
     </head>
     <body>
         <header class="headings">
@@ -46,414 +54,63 @@
         </div>
         <div id="gallery">
             <div>
-                 <div class="submenu controls">
-                    <!--button type="button" class="control" data-filter="all">all</button-->
-                    <button type="button" class="control" data-filter=".portrait">fashion</button>
-                    <button type="button" class="control" data-filter=".lifestyle">lifestyle</button>
-                    <button type="button" class="control" data-filter=".food">food</button>
+                 <div class="submenu controls" />
+                    <button type="button" onclick="showOnly('fashion')" class="control">fashion</button>
+                    <button type="button" onclick="showOnly('food')" class="control">food</button>
+                    <button type="button" onclick="showOnly('project')" class="control">projects</button>
                 </div>
-                <div class="container">
-
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/02.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/02.jpg" alt="Fashion" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/01.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/01.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/20.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/20.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/04.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/04.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/03.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/03.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/12.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/12.jpeg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/14.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/14.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/08.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/08.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/09.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/09.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/17.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/17.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/11.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/11.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/06.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/06.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/13.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/13.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/07.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/07.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/16.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/16.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/15.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/15.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/10.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/10.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/18.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/18.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/19.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/19.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/05.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/05.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/21.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/21.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/22.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/22.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix portrait">
-                        <a rel="portrait" href="portfolio/portrait/full/23.jpg" class="swipebox" title="Fashion">
-                            <img src="portfolio/portrait/thumb/23.jpg" alt="" />
-                        </a>
-                    </div>
-
-
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/02.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/02.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/24.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/24.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/03.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/03.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/11.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/11.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/26.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/26.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/06.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/06.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/15.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/15.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/17.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/17.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/08.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/08.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/01.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/01.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/09.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/09.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/19.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/19.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/12.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/12.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/13.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/13.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/18.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/18.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/05.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/05.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/29.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/29.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/10.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/10.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/14.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/14.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/04.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/04.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/01.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/01.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/22.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/22.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/23.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/23.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/21.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/21.jpeg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/25.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/25.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/07.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/07.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/27.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/27.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/28.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/28.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix lifestyle">
-                        <a rel="lifestyle" href="portfolio/lifestyle/full/16.jpg" class="swipebox" title="Lifestyle">
-                            <img src="portfolio/lifestyle/thumb/16.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/01.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/01.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/05.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/05.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/11.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/11.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/10.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/10.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/08.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/08.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/07.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/07.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/04.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/04.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/09.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/09.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/06.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/06.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/02.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/02.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/03.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/03.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/13.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/13.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/12.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/12.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/15.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/15.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/14.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/14.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/17.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/17.jpg" alt="" />
-                        </a>
-                    </div>
-                    <div class="mix food">
-                        <a rel="food" href="portfolio/food/full/16.jpg" class="swipebox" title="Food">
-                            <img src="portfolio/food/thumb/16.jpg" alt="" />
-                        </a>
-                    </div>
-
-                    <div class="gap"></div>
-                    <div class="gap"></div>
-                    <div class="gap"></div>
-                </div>
-
+            </div>   
+        </div>
+        <div id="exibit">
+            <div id="food-exibit" class="windowContainer">
+                 <img src="portfolio/food/01food.jpg" alt="Food" />
+                 <img src="portfolio/food/02food.jpg" alt="Food" />
+                 <img src="portfolio/food/03food.jpg" alt="Food" />
+                 <img src="portfolio/food/04food.jpg" alt="Food" />
+                 <img src="portfolio/food/05food.jpg" alt="Food" />
+                 <img src="portfolio/food/06food.jpg" alt="Food" />
+                 <img src="portfolio/food/07food.jpg" alt="Food" />
+                 <img src="portfolio/food/08food.jpg" alt="Food" />
+                 <img src="portfolio/food/09food.jpg" alt="Food" />
+                 <img src="portfolio/food/10food.jpg" alt="Food" />
             </div>
-            <script src="js/mixitup.min.js"></script>
-            <script>
-            var containerEl = document.querySelector('.container');
-            var mixer = mixitup(containerEl, {
-                animation: {
-                    animateResizeContainer: false ,// required to prevent column algorithm bug
-                    "duration": 250,
-                    "nudge": false,
-                    "reverseOut": false,
-                    "effects": ""
-                },
-                load: {
-                    filter: '.portrait'
-                }
-            });
-            $( document ).ready(function() {
-                $( '.swipebox' ).swipebox();
-                $( '#nothing' ).click( function( e ) {
-                    e.preventDefault();
-                    $.swipebox( [
-                        { href : 'http://swipebox.csag.co/mages/image-1.jpg', title : 'My Caption' },
-                    ] );
-                } );
-            });
-            </script>
+            <div id="fashion-exibit" class="windowContainer">
+                 <img src="portfolio/fashion/01fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/02fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/03fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/04fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/05fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/06fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/07fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/08fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/09fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/10fashion.jpg" alt="Fashion" />
+                 <img src="portfolio/fashion/11fashion.jpg" alt="Fashion" />
+            </div>
+            <div id="project-exibit" class="windowContainer">
+                 <img src="portfolio/project/01project.jpg" alt="Project" />
+                 <img src="portfolio/project/02project.jpg" alt="Project" />
+                 <img src="portfolio/project/03project.jpg" alt="Project" />
+                 <img src="portfolio/project/04project.jpg" alt="Project" />
+                 <img src="portfolio/project/05project.jpg" alt="Project" />
+                 <img src="portfolio/project/06project.jpg" alt="Project" />
+                 <img src="portfolio/project/07project.jpg" alt="Project" />
+            </div>
         </div>
         <div id="story" class="section" >
             <a name="story" ></a>
             <div id="story_title" class="headings" >my story</div>
             <p>
-                Hola, soy Soledad.
-                Fotógrafa , directora de arte, y muy curiosa.
-                Mis días se reparten entre trabajos freelance, proyectos personales y mi familia.
-                Estudié Dirección en la Universidad del Cine, desde siempre estuve atraída por lo creativo y lo estético. Sin embargo con el pasar de los años la fotografía comenzó a cobrar mucho más sentido en mi vida. El movimiento quedo de lado y el registro estático ganó lugar.
-                Viví en Estados Unidos, aprendí del oficio junto a diferentes fotógrafos. Ya de regreso en Argentina realicé talleres junto a Alberto Goldenstein, Nacho Iasparra, entre otros.
-                Creo en el aprendizaje diario, en profundizar, en el mundo interior que cada uno lleva dentro, en la mirada de mi hijo, en la imagen, en el cine, en las historias, encerradas a veces en apenas un instante.
-                Bueno, ya me conoces. Si queres trabajar conmigo, proponer  o compartir un par de lineas, feliz estoy de poder responderte!
+                Soy Soledad Rodriguez. Fotógrafa y Directora de Arte.<br>
+                Vivo en Buenos Aires donde desarrollo mi obra y trabajo como fotógrafa.<br>
+                Disfruto del sol que atraviesa mi ventana, mis plantas, mi hogar, la mirada de mi hijo y las historias encerradas en apenas un instante. <br>
+                Si queres contactar conmigo podes hacerlo aqui: hola@soledadrodriguez.com.ar
             </p>
             <p>
-                Hi, I'm Soledad.
-                Photographer, art director and very curious.
-                I occupy my days between freelance work, personal projects and my family.
-                I graduated from the Universidad del Cine, I've always been attracted to aesthetics and creativity. However, over the years, photography took a more important space in my life.
-                I spent a few years in United States where I learned the ropes working with multiple professionals. Back to Argentina I continued to learn with Alberto Goldenstein and Nacho Iasparra among others.
-                I believe on learning everyday, going deep, the inner world we all have whitin, on my boy's look, the picture, movies, stories locked in an instant.
-                You now know me, if you want to work or share anything, drop me a line, I'll be happy to read it.
+                I'm Soledad Rodriguez. Photographer and art director.<br>
+                I live in Buenos Aires where I develop my art and work as a Photographer<br>
+                I enjoy the sun through my window, my plants, my home, my son's look and stories trapped in just an instant<br>
+                If you want to contact me you can do it here hola@soledadrodriguez.com.ar
             </p>
         </div>
         <div id="memories" class="section headings">
