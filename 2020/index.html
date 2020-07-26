@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es-AR" prefix="og: http://ogp.me/ns#">
+    <head>
+        <title>Sole Rodriguez</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Sole Rodriguez Fotografia" />
+        <meta property="og:description" content="Sole Rodriguez Fotografia" />
+        <meta property="og:url" content="http://www.solerodriguez.com.ar" />
+        <meta property="og:site_name" content="Sole Rodriguez Fotografia" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="Sole Rodriguez Fotografia" />
+        <meta name="twitter:title" content="Sole Rodriguez Fotografia" />
+        <script type='application/ld+json'>
+            {
+                "@context":"http:\/\/schema.org",
+                "@type":"WebSite",
+                "url":"http:\/\/www.solerodriguez.com.ar\/",
+                "name":"Sole Rodriguez Fotografia"
+            }
+        </script>
+        <link rel='stylesheet' id='my-css'  href='style.css' type='text/css' media='all' />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <script>
+            var allExibits = ['ginger', 'analogicas', 'woods', 'eucaliptus', 'producto', 'ellas', 'blanco_y_negro', 'alimentos'];
+            function hideAll() {
+                document.getElementById('contact_container').style.display = "none";
+                document.getElementById('portada').style.display = "none"; 
+                document.getElementById('exibit').style.display = "none";
+                document.getElementById('contact_menu').classList.remove("selected_menu");
+                document.getElementById('projects_menu').classList.remove("selected_menu");
+                for (var i in allExibits) {
+                    document.getElementById(allExibits[i] + '-exibit').style.display = "none"; 
+                }
+                window.scrollTo(0, 0);
+            }
+            function showGallery(exibitId) {
+                hideAll();
+                document.getElementById(exibitId + '-exibit').style.display = "flex";
+            }
+            function showContact() {
+                hideAll();
+                document.getElementById('contact_container').style.display = "block";
+                document.getElementById('contact_menu').classList.add("selected_menu");
+            }
+            function showProjects() {
+                hideAll();
+                document.getElementById('exibit').style.display = "block";
+                document.getElementById('projects_menu').classList.add("selected_menu");
+            }
+            function showPortada() {
+                hideAll();
+                document.getElementById('portada').style.display = "block";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="title"><a id="portada_menu" href="#portada_link" onclick="showPortada()">soledad rodriguez</a></div>
+            <div class="menu_container">
+                <ul class="menu">
+                    <li><a id="projects_menu" href="#projects" onclick="showProjects()">Proyectos</a></li>
+                    <li><a id="contact_menu" href="#contact_link" onclick="showContact()">Contacto</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="portada">
+            <div id="portada1-exibit">
+                <div class="portada-small"><img src="img/portada/01.jpg" alt="Portada" /></div>
+                <div class="portada-small"><img src="img/portada/03.jpg" alt="Portada" /></div>
+                <div class="portada-large"><img src="img/portada/02.jpg" alt="Portada" /></div>
+                <div class="portada-large"><img src="img/portada/04.jpg" alt="Portada" /></div>
+            </div>
+            <div id="portada2-exibit">
+                <div><img src="img/portada/05.jpg" alt="Portada" /></div>
+                <div><img src="img/portada/07.jpg" alt="Portada" /></div>
+                <div><img src="img/portada/09.jpg" alt="Portada" /></div>
+                <div><img src="img/portada/11.jpg" alt="Portada" /></div>
+                <div><img src="img/portada/06.jpg" alt="Portada" /></div>                
+                <div><img src="img/portada/08.jpg" alt="Portada" /></div>
+                <div><img src="img/portada/10.jpg" alt="Portada" /></div>
+                <div><img src="img/portada/12.jpg" alt="Portada" /></div>
+                <div><img src="img/portada/13.jpg" alt="Portada" /></div>
+            </div>
+        </div>
+        <div id="exibit">
+            <div id="projects-exibit" class="projects">
+                <div class="project">
+                    <a onclick="showGallery('ginger')">
+                        <img src="img/proyectos/01.jpg" alt="Ginger Jewerly" />
+                        <div class="project_name" >Ginger Jewerly</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a onclick="showGallery('analogicas')">
+                        <img src="img/proyectos/02.jpg" alt="Analogicas" />
+                        <div class="project_name" >Analogicas</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a onclick="showGallery('woods')">
+                        <img src="img/proyectos/03.jpg" alt="Into the woods" />
+                        <div class="project_name" >Into the woods</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a onclick="showGallery('eucaliptus')">
+                        <img src="img/proyectos/04.jpg" alt="Eucaliptus" />
+                        <div class="project_name" >Eucaliptus</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a onclick="showGallery('producto')">
+                        <img src="img/proyectos/05.jpg" alt="Producto" />
+                        <div class="project_name" >Producto</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a onclick="showGallery('ellas')">
+                        <img src="img/proyectos/06.jpg" alt="Ellas" />
+                        <div class="project_name" >Ellas</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a onclick="showGallery('blanco_y_negro')">
+                        <img src="img/proyectos/07.jpg" alt="Blanco & Negro" />
+                        <div class="project_name" >Blanco & Negro</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a onclick="showGallery('alimentos')">
+                        <img src="img/proyectos/08.jpg" alt="Alimentos" />
+                        <div class="project_name" >Alimentos</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="contact_container">
+            <div id="contact">
+                <div id="conact_image">
+                    <img class="conact_image" src="img/contact.jpg" alt="Contact" />
+                </div>
+                <div id="contact_details">
+                    <ul>
+                        <li>Foto + Arte</li>
+                        <li>Buenas Aires</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li><a href="mailto:hola@solerodriguez.com.ar" target="_blank" class="mail">hola@solerodriguez.com.ar</a></li>
+                        <li>&nbsp;</li>
+                        <li><a href="https://www.instagram.com/m.sole.rodriguez/" target="_blank" class="mail">instagram @m.sole.rodriguez</a></li>
+                    </ul>
+                </div>
+                <br/>
+                <br/>
+            </div>
+        </div>
+        <div id="ginger-exibit" class="exibit-gallery">
+            <div class="double"><img src="img/proyectos/1.Ginger/1.jpg" alt="Ginger" /></div>
+            <div class="single"><img src="img/proyectos/1.Ginger/2.jpg" alt="Ginger" /></div>
+            <div class="single"><img src="img/proyectos/1.Ginger/3.jpg" alt="Ginger" /></div>
+            <div class="double"><img src="img/proyectos/1.Ginger/4.jpg" alt="Ginger" /></div>
+            <div class="single"><img src="img/proyectos/1.Ginger/5.jpg" alt="Ginger" /></div>
+            <div class="single"><img src="img/proyectos/1.Ginger/6.jpg" alt="Ginger" /></div>
+            <div class="double"><img src="img/proyectos/1.Ginger/7.jpg" alt="Ginger" /></div>
+            <div class="single"><img src="img/proyectos/1.Ginger/8.jpg" alt="Ginger" /></div>
+            <div class="single"><img src="img/proyectos/1.Ginger/9.jpg" alt="Ginger" /></div>
+            <div class="double"><img src="img/proyectos/1.Ginger/10.jpg" alt="Ginger" /></div>
+       </div>
+       <div id="analogicas-exibit" class="exibit-gallery">
+            <div class="double"><img src="img/proyectos/2.Analogicas/1.jpg" alt="Analogicas" /></div>
+            <div class="double"><img src="img/proyectos/2.Analogicas/2.jpg" alt="Analogicas" /></div>
+            <div class="single"><img src="img/proyectos/2.Analogicas/3.jpg" alt="Analogicas" /></div>
+            <div class="single"><img src="img/proyectos/2.Analogicas/4.jpg" alt="Analogicas" /></div>
+            <div class="phrase">
+                <ul>
+                    <li>No hay un espacio</li>
+                    <li>un bello espacio alrededor de nosotros</li>
+                    <li>hay cantidad de pequeños trozos de espacios</li>
+                </ul>
+            </div>
+            <div class="double"><img src="img/proyectos/2.Analogicas/5.jpg" alt="Analogicas" /></div>
+            <div class="single"><img src="img/proyectos/2.Analogicas/6.jpg" alt="Analogicas" /></div>
+            <div class="single"><img src="img/proyectos/2.Analogicas/7.jpg" alt="Analogicas" /></div>
+            <div class="single"><img src="img/proyectos/2.Analogicas/8.jpg" alt="Analogicas" /></div>
+            <div class="single"><img src="img/proyectos/2.Analogicas/9.jpg" alt="Analogicas" /></div>
+       </div>
+       <div id="woods-exibit" class="exibit-gallery">
+            <div class="double"><img src="img/proyectos/3.IntoTheWoods/1.jpg" alt="Into The Woods" /></div>
+            <div class="single"><img src="img/proyectos/3.IntoTheWoods/2.jpg" alt="Into The Woods" /></div>
+            <div class="single"><img src="img/proyectos/3.IntoTheWoods/3.jpg" alt="Into The Woods" /></div>
+            <div class="double"><img src="img/proyectos/3.IntoTheWoods/4.jpg" alt="Into The Woods" /></div>
+            <div class="single"><img src="img/proyectos/3.IntoTheWoods/5.jpg" alt="Into The Woods" /></div>
+            <div class="single"><img src="img/proyectos/3.IntoTheWoods/6.jpg" alt="Into The Woods" /></div>
+            <div class="double"><img src="img/proyectos/3.IntoTheWoods/7.jpg" alt="Into The Woods" /></div>
+            <div class="single"><img src="img/proyectos/3.IntoTheWoods/8.jpg" alt="Into The Woods" /></div>
+            <div class="single"><img src="img/proyectos/3.IntoTheWoods/9.jpg" alt="Into The Woods" /></div>
+       </div>
+       <div id="eucaliptus-exibit" class="exibit-gallery">
+            <div class="double"><img src="img/proyectos/4.Eucaliptus/1.jpg" alt="Eucaliptus" /></div>
+            <div class="double"><img src="img/proyectos/4.Eucaliptus/2.jpg" alt="Eucaliptus" /></div>
+            <div class="single"><img src="img/proyectos/4.Eucaliptus/3.jpg" alt="Eucaliptus" /></div>
+            <div class="single"><img src="img/proyectos/4.Eucaliptus/4.jpg" alt="Eucaliptus" /></div>
+            <div class="double"><img src="img/proyectos/4.Eucaliptus/5.jpg" alt="Eucaliptus" /></div>
+            <div class="double"><img src="img/proyectos/4.Eucaliptus/6.jpg" alt="Eucaliptus" /></div>
+            <div class="double"><img src="img/proyectos/4.Eucaliptus/7.jpg" alt="Eucaliptus" /></div>
+        </div>
+        <div id="producto-exibit" class="exibit-gallery">
+            <div class="single spaced"><img src="img/proyectos/5.Producto/1.jpg" alt="Producto" /></div>
+            <div class="single spaced"><img src="img/proyectos/5.Producto/2.jpg" alt="Producto" /></div>
+            <div class="single spaced"><img src="img/proyectos/5.Producto/3.jpg" alt="Producto" /></div>
+            <div class="single spaced"><img src="img/proyectos/5.Producto/4.jpg" alt="Producto" /></div>
+            <div class="single spaced"><img src="img/proyectos/5.Producto/5.jpg" alt="Producto" /></div>
+            <div class="single spaced"><img src="img/proyectos/5.Producto/6.jpg" alt="Producto" /></div>
+            <div class="single"><img src="img/proyectos/5.Producto/7.jpg" alt="Producto" /></div>
+            <div class="single"><img src="img/proyectos/5.Producto/8.jpg" alt="Producto" /></div>
+            <div class="single"><img src="img/proyectos/5.Producto/9.jpg" alt="Producto" /></div>
+            <div class="single"><img src="img/proyectos/5.Producto/10.jpg" alt="Producto" /></div>
+            <div class="phrase">
+                <ul>
+                    <li>Estilismo & Fotografia</li>
+                    <li>Clientes: Ginger Jewerly • Kali Botanica • Paganas</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ellas-exibit" class="exibit-gallery">
+            <div class="single spaced"><img src="img/proyectos/6.Ellas/1.jpg" alt="Ellas" /></div>
+            <div class="single spaced"><img src="img/proyectos/6.Ellas/2.jpg" alt="Ellas" /></div>
+            <div class="double"><img src="img/proyectos/6.Ellas/3.jpg" alt="Ellas" /></div>
+            <div class="single spaced"><img src="img/proyectos/6.Ellas/4.jpg" alt="Ellas" /></div>
+            <div class="single spaced"><img src="img/proyectos/6.Ellas/5.jpg" alt="Ellas" /></div>
+            <div class="single"><img src="img/proyectos/6.Ellas/6.jpg" alt="Ellas" /></div>
+            <div class="single"><img src="img/proyectos/6.Ellas/7.jpg" alt="Ellas" /></div>
+            <div class="double spaced"><img src="img/proyectos/6.Ellas/8.jpg" alt="Ellas" /></div>
+            <div class="double"><img src="img/proyectos/6.Ellas/9.jpg" alt="Ellas" /></div>
+            <div class="single"><img src="img/proyectos/6.Ellas/10.jpg" alt="Ellas" /></div>
+            <div class="single"><img src="img/proyectos/6.Ellas/11.jpg" alt="Ellas" /></div>
+        </div>
+        <div id="blanco_y_negro-exibit" class="exibit-gallery">
+            <div class="double"><img src="img/proyectos/7.BlancoYNegro/1.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/2.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/3.jpg" alt="Blanco Y Negro" /></div>
+            <div class="double"><img src="img/proyectos/7.BlancoYNegro/4.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/5.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/6.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/7.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/8.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/9.jpg" alt="Blanco Y Negro" /></div>
+            <div class="single"><img src="img/proyectos/7.BlancoYNegro/10.jpg" alt="Blanco Y Negro" /></div>
+            <div class="phrase">
+                Me adentre en la fotografia analogica observando donde se posaba mi ojo, la cotidianidad era mi ciudad, la gente, en aquel entonces.
+            </div>
+        </div>
+        <div id="alimentos-exibit" class="exibit-gallery">
+            <div class="double spaced"><img src="img/proyectos/8.Alimentos/1.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/2.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/3.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/4.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/5.jpg" alt="Alimentos" /></div>
+            <div class="double spaced"><img src="img/proyectos/8.Alimentos/6.jpg" alt="Alimentos" /></div>
+            <div class="double"><img src="img/proyectos/8.Alimentos/7.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/8.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/9.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/10.jpg" alt="Alimentos" /></div>
+            <div class="single"><img src="img/proyectos/8.Alimentos/11.jpg" alt="Alimentos" /></div>
+            <div class="phrase">
+                <ul>
+                    <li>Estilismo & Fotografia</li>
+                    <li>Clientes: Cocinar es divertido • Luce Cocina</li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <br/>
+    </body>
+<html>

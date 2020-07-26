@@ -1,0 +1,239 @@
+body {
+    border: 0px;
+    border: none;
+    background-color: #fff;
+    margin: 0 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    max-width: 1200px;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    margin: auto;
+    height: 65px;
+}
+
+#title {
+    float: left;
+    font-size: 2vh;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.menu_container {
+    font-size: 2vh;
+    float: right;
+    padding-top: 7px;
+}
+
+.menu {
+    margin: 0px auto;
+    display: block;
+    list-style-type: disc;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 5px 35px;
+}
+
+/* Style the active/current link*/
+a:active, a:hover,  a:focus, .selected_menu {
+    text-shadow: black 1px 0px 0px; 
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#portada {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 4vh;
+}
+
+#portada1-exibit {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-height: 1100px;
+    padding-bottom: 20px;
+}
+
+#portada1-exibit :nth-child(1) {
+    padding-bottom: 10px;
+}
+#portada1-exibit :nth-child(3) {
+    padding-bottom: 27px;
+}
+.portada-small {
+    max-width: 400px;
+}
+
+.portada-large {
+    max-width: 500px;
+}
+
+#portada2-exibit {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 2600px;
+}
+#portada2-exibit div {
+    max-width: 400px;
+    padding-bottom: 30px;
+}
+
+#exibit {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 4vh;
+    text-align: left;
+    display: none;
+}
+
+#exibit div img {
+    width: 300px;
+    height: 450px;
+    padding-bottom: 2vh;
+}
+
+.projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2vh;
+}
+.project {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+#contact_container {
+    display: none;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 4vh;
+}
+#contact {
+    display: flex;
+    font-size: 2vh;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#conact_image img {
+    width: 300px;
+}
+
+#contact_details {
+    align-self: flex-end;
+    text-align: left;
+}
+#contact_details ul {
+    list-style-type: none;
+}
+
+.phrase {
+    text-align: left;
+    font-size: 2vh;
+    max-width: 1200px;
+}
+.phrase ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    padding-left: 0px;
+}
+.exibit-gallery {
+    display: none;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 30px;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px) {
+    .menu_container {
+        width: 100%;
+    }
+
+    .menu li {
+        padding-right: 20px;
+        padding-left: 10px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .exibit-gallery { 
+        justify-content: center;
+    }
+    #portada1-exibit {
+        max-height: 2200px;
+        justify-content: center;
+        align-items: center;
+    }
+    #portada2-exibit {
+        max-height: 5200px;
+        justify-content: center;
+        align-items: center;
+    }
+    #portada1-exibit div img {
+        width: 375px;
+    }
+    #portada2-exibit div img {
+        width: 375px;
+    }
+}
+
+.exibit-gallery div {
+    padding-top: 30px;
+}
+
+.exibit-gallery .single {
+    flex-grow: 2;
+    max-width: 375px;
+    text-align: center;
+}
+
+.spaced {
+    padding-bottom: 60px;
+}
+
+.exibit-gallery .double {
+    flex-grow: 1;
+}
+
+.exibit-gallery img {
+    max-width: 100%;
+}
+
+
+
+
+.splash {
+    background: url(img/start.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.splash-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 3s ease-in, visibility 0s 3s;
+}
+#sub_title {
+    padding-left: 35px;
+}
