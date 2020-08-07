@@ -38,9 +38,37 @@
                 window.scrollTo(0, 0);
             }
             function showGallery(exibitId) {
+                var gallery = galleries[exibitId];
+                var galleryView = document.getElementById(exibitId + "-exibit");
+
+                if (galleryView.childElementCount < 1) {
+                    for (const element of gallery.images) {
+                        var node = document.createElement("DIV");
+                        for (const mode of element.mode.split(" ")) {
+                            node.classList.add(mode);
+                        }
+                        if (element.mode == "phrase") {
+                            var ul = document.createElement("UL");
+                            for (const line of element.lines) {
+                                var li = document.createElement("LI");
+                                li.innerText = line;
+                                ul.appendChild(li);
+                            }
+                            node.appendChild(ul);
+                        } else {
+                            var image = document.createElement("IMG");
+                            image.src = gallery.imageBasePath + element.path;
+                            image.alt = gallery.alt;
+                            node.appendChild(image);
+                        }
+                        galleryView.appendChild(node);
+                    }    
+                }
+
                 hideAll();
-                document.getElementById(exibitId + '-exibit').style.display = "flex";
+                galleryView.style.display = "flex";
             }
+
             function showContact() {
                 hideAll();
                 document.getElementById('contact_container').style.display = "block";
@@ -55,6 +83,159 @@
                 hideAll();
                 document.getElementById('portada').style.display = "block";
             }
+
+            var galleries = {
+                "ginger": {
+                    "imageBasePath": "img/proyectos/1.Ginger/",
+                    "alt": "Ginger",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "double"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"path": "12.jpg" , "mode": "double"}
+                    ]
+                },
+                "analogicas": {
+                    "imageBasePath": "img/proyectos/2.Analogicas/",
+                    "alt": "Analogicas",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"mode": "phrase", "lines" : [
+                            "No hay un espacio",
+                            "un bello espacio alrededor de nosotros",
+                            "hay cantidad de pequeños trozos de espacios"
+                        ]},
+                        {"path": "05.jpg" , "mode": "double"},
+                        {"path": "06.jpg" , "mode": "double"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"path": "12.jpg" , "mode": "single"}
+                    ]
+                },
+                "woods" : {
+                    "imageBasePath": "img/proyectos/3.IntoTheWoods/",
+                    "alt": "Into The Woods",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "double"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"}
+                    ]
+                },
+                "eucaliptus" : {
+                    "imageBasePath": "img/proyectos/4.Eucaliptus/",
+                    "alt": "Eucaliptus",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "double"},
+                        {"path": "08.jpg" , "mode": "double"}
+                    ]
+                },
+                "producto" : {
+                    "imageBasePath": "img/proyectos/5.Producto/",
+                    "alt": "Producto",
+                    "images": [
+                        {"path": "1.jpg" , "mode": "single spaced"},
+                        {"path": "2.jpg" , "mode": "single spaced"},
+                        {"path": "3.jpg" , "mode": "single spaced"},
+                        {"path": "4.jpg" , "mode": "single spaced"},
+                        {"path": "5.jpg" , "mode": "single spaced"},
+                        {"path": "6.jpg" , "mode": "single spaced"},
+                        {"path": "7.jpg" , "mode": "single"},
+                        {"path": "8.jpg" , "mode": "single"},
+                        {"path": "9.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"mode": "phrase", "lines" : [
+                            "Estilismo & Fotografia",
+                            "Clientes: Ginger Jewerly • Kali Botanica • Paganas"
+                        ]}
+                    ]
+                },
+                "ellas" : {
+                    "imageBasePath": "img/proyectos/6.Ellas/",
+                    "alt": "Ellas",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single spaced"},
+                        {"path": "02.jpg" , "mode": "single spaced"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"path": "12.jpg" , "mode": "single"},
+                        {"path": "13.jpg" , "mode": "single"},
+                        {"path": "14.jpg" , "mode": "single"}
+                    ]
+                },
+                "blanco_y_negro" : {
+                    "imageBasePath": "img/proyectos/7.BlancoYNegro/",
+                    "alt": "Blanco Y Negro",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "double"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "double"},
+                        {"mode": "phrase", "lines" : [
+                            "Me adentre en la fotografia analogica observando donde se posaba mi ojo, la cotidianidad era mi ciudad, la gente, en aquel entonces."
+                        ]}
+                    ]
+                },
+                "alimentos" : {
+                    "imageBasePath": "img/proyectos/8.Alimentos/",
+                    "alt": "Alimentos",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "double"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"mode": "phrase", "lines" : [
+                            "Estilismo & Fotografia",
+                            "Clientes: Cocinar es divertido • Luce Cocina"
+                        ]}
+                    ]
+                }
+            };
         </script>
     </head>
     <body>
@@ -69,70 +250,70 @@
         </header>
         <div id="portada">
             <div id="portada1-exibit">
-                <div class="portada-small"><img src="img/portada/01.jpg" alt="Portada" /></div>
-                <div class="portada-small"><img src="img/portada/03.jpg" alt="Portada" /></div>
-                <div class="portada-large"><img src="img/portada/02.jpg" alt="Portada" /></div>
-                <div class="portada-large"><img src="img/portada/04.jpg" alt="Portada" /></div>
+                <div class="portada-small portada-01"></div>
+                <div class="portada-small portada-03"></div>
+                <div class="portada-large portada-02"></div>
+                <div class="portada-large portada-04"></div>
             </div>
             <div id="portada2-exibit">
-                <div><img src="img/portada/05.jpg" alt="Portada" /></div>
-                <div><img src="img/portada/07.jpg" alt="Portada" /></div>
-                <div><img src="img/portada/09.jpg" alt="Portada" /></div>
-                <div><img src="img/portada/11.jpg" alt="Portada" /></div>
-                <div><img src="img/portada/06.jpg" alt="Portada" /></div>                
-                <div><img src="img/portada/08.jpg" alt="Portada" /></div>
-                <div><img src="img/portada/10.jpg" alt="Portada" /></div>
-                <div><img src="img/portada/12.jpg" alt="Portada" /></div>
-                <div><img src="img/portada/13.jpg" alt="Portada" /></div>
+                <div class="portada-05"></div>
+                <div class="portada-07"></div>
+                <div class="portada-09"></div>
+                <div class="portada-11"></div>
+                <div class="portada-06"></div>
+                <div class="portada-08"></div>
+                <div class="portada-10"></div>
+                <div class="portada-12"></div>
+                <div class="portada-13"></div>
             </div>
         </div>
         <div id="exibit">
             <div id="projects-exibit" class="projects">
                 <div class="project">
                     <a onclick="showGallery('ginger')">
-                        <img src="img/proyectos/01.jpg" alt="Ginger Jewerly" />
+                        <div class="projects-1"></div>
                         <div class="project_name" >Ginger Jewerly</div>
                     </a>
                 </div>
                 <div class="project">
                     <a onclick="showGallery('analogicas')">
-                        <img src="img/proyectos/02.jpg" alt="Analogicas" />
+                        <div class="projects-2"></div>
                         <div class="project_name" >Analogicas</div>
                     </a>
                 </div>
                 <div class="project">
                     <a onclick="showGallery('woods')">
-                        <img src="img/proyectos/03.jpg" alt="Into the woods" />
+                        <div class="projects-3"></div>
                         <div class="project_name" >Into the woods</div>
                     </a>
                 </div>
                 <div class="project">
                     <a onclick="showGallery('eucaliptus')">
-                        <img src="img/proyectos/04.jpg" alt="Eucaliptus" />
+                        <div class="projects-4"></div>
                         <div class="project_name" >Eucaliptus</div>
                     </a>
                 </div>
                 <div class="project">
                     <a onclick="showGallery('producto')">
-                        <img src="img/proyectos/05.jpg" alt="Producto" />
+                        <div class="projects-5"></div>
                         <div class="project_name" >Producto</div>
                     </a>
                 </div>
                 <div class="project">
                     <a onclick="showGallery('ellas')">
-                        <img src="img/proyectos/06.jpg" alt="Ellas" />
+                        <div class="projects-6"></div>
                         <div class="project_name" >Ellas</div>
                     </a>
                 </div>
                 <div class="project">
                     <a onclick="showGallery('blanco_y_negro')">
-                        <img src="img/proyectos/07.jpg" alt="Blanco & Negro" />
+                        <div class="projects-7"></div>
                         <div class="project_name" >Blanco & Negro</div>
                     </a>
                 </div>
                 <div class="project">
                     <a onclick="showGallery('alimentos')">
-                        <img src="img/proyectos/08.jpg" alt="Alimentos" />
+                        <div class="projects-8"></div>
                         <div class="project_name" >Alimentos</div>
                     </a>
                 </div>
@@ -158,121 +339,14 @@
                 <br/>
             </div>
         </div>
-        <div id="ginger-exibit" class="exibit-gallery">
-            <div class="double"><img src="img/proyectos/1.Ginger/1.jpg" alt="Ginger" /></div>
-            <div class="single"><img src="img/proyectos/1.Ginger/2.jpg" alt="Ginger" /></div>
-            <div class="single"><img src="img/proyectos/1.Ginger/3.jpg" alt="Ginger" /></div>
-            <div class="double"><img src="img/proyectos/1.Ginger/4.jpg" alt="Ginger" /></div>
-            <div class="single"><img src="img/proyectos/1.Ginger/5.jpg" alt="Ginger" /></div>
-            <div class="single"><img src="img/proyectos/1.Ginger/6.jpg" alt="Ginger" /></div>
-            <div class="double"><img src="img/proyectos/1.Ginger/7.jpg" alt="Ginger" /></div>
-            <div class="single"><img src="img/proyectos/1.Ginger/8.jpg" alt="Ginger" /></div>
-            <div class="single"><img src="img/proyectos/1.Ginger/9.jpg" alt="Ginger" /></div>
-            <div class="double"><img src="img/proyectos/1.Ginger/10.jpg" alt="Ginger" /></div>
-       </div>
-       <div id="analogicas-exibit" class="exibit-gallery">
-            <div class="double"><img src="img/proyectos/2.Analogicas/1.jpg" alt="Analogicas" /></div>
-            <div class="double"><img src="img/proyectos/2.Analogicas/2.jpg" alt="Analogicas" /></div>
-            <div class="single"><img src="img/proyectos/2.Analogicas/3.jpg" alt="Analogicas" /></div>
-            <div class="single"><img src="img/proyectos/2.Analogicas/4.jpg" alt="Analogicas" /></div>
-            <div class="phrase">
-                <ul>
-                    <li>No hay un espacio</li>
-                    <li>un bello espacio alrededor de nosotros</li>
-                    <li>hay cantidad de pequeños trozos de espacios</li>
-                </ul>
-            </div>
-            <div class="double"><img src="img/proyectos/2.Analogicas/5.jpg" alt="Analogicas" /></div>
-            <div class="single"><img src="img/proyectos/2.Analogicas/6.jpg" alt="Analogicas" /></div>
-            <div class="single"><img src="img/proyectos/2.Analogicas/7.jpg" alt="Analogicas" /></div>
-            <div class="single"><img src="img/proyectos/2.Analogicas/8.jpg" alt="Analogicas" /></div>
-            <div class="single"><img src="img/proyectos/2.Analogicas/9.jpg" alt="Analogicas" /></div>
-       </div>
-       <div id="woods-exibit" class="exibit-gallery">
-            <div class="double"><img src="img/proyectos/3.IntoTheWoods/1.jpg" alt="Into The Woods" /></div>
-            <div class="single"><img src="img/proyectos/3.IntoTheWoods/2.jpg" alt="Into The Woods" /></div>
-            <div class="single"><img src="img/proyectos/3.IntoTheWoods/3.jpg" alt="Into The Woods" /></div>
-            <div class="double"><img src="img/proyectos/3.IntoTheWoods/4.jpg" alt="Into The Woods" /></div>
-            <div class="single"><img src="img/proyectos/3.IntoTheWoods/5.jpg" alt="Into The Woods" /></div>
-            <div class="single"><img src="img/proyectos/3.IntoTheWoods/6.jpg" alt="Into The Woods" /></div>
-            <div class="double"><img src="img/proyectos/3.IntoTheWoods/7.jpg" alt="Into The Woods" /></div>
-            <div class="single"><img src="img/proyectos/3.IntoTheWoods/8.jpg" alt="Into The Woods" /></div>
-            <div class="single"><img src="img/proyectos/3.IntoTheWoods/9.jpg" alt="Into The Woods" /></div>
-       </div>
-       <div id="eucaliptus-exibit" class="exibit-gallery">
-            <div class="double"><img src="img/proyectos/4.Eucaliptus/1.jpg" alt="Eucaliptus" /></div>
-            <div class="double"><img src="img/proyectos/4.Eucaliptus/2.jpg" alt="Eucaliptus" /></div>
-            <div class="single"><img src="img/proyectos/4.Eucaliptus/3.jpg" alt="Eucaliptus" /></div>
-            <div class="single"><img src="img/proyectos/4.Eucaliptus/4.jpg" alt="Eucaliptus" /></div>
-            <div class="double"><img src="img/proyectos/4.Eucaliptus/5.jpg" alt="Eucaliptus" /></div>
-            <div class="double"><img src="img/proyectos/4.Eucaliptus/6.jpg" alt="Eucaliptus" /></div>
-            <div class="double"><img src="img/proyectos/4.Eucaliptus/7.jpg" alt="Eucaliptus" /></div>
-        </div>
-        <div id="producto-exibit" class="exibit-gallery">
-            <div class="single spaced"><img src="img/proyectos/5.Producto/1.jpg" alt="Producto" /></div>
-            <div class="single spaced"><img src="img/proyectos/5.Producto/2.jpg" alt="Producto" /></div>
-            <div class="single spaced"><img src="img/proyectos/5.Producto/3.jpg" alt="Producto" /></div>
-            <div class="single spaced"><img src="img/proyectos/5.Producto/4.jpg" alt="Producto" /></div>
-            <div class="single spaced"><img src="img/proyectos/5.Producto/5.jpg" alt="Producto" /></div>
-            <div class="single spaced"><img src="img/proyectos/5.Producto/6.jpg" alt="Producto" /></div>
-            <div class="single"><img src="img/proyectos/5.Producto/7.jpg" alt="Producto" /></div>
-            <div class="single"><img src="img/proyectos/5.Producto/8.jpg" alt="Producto" /></div>
-            <div class="single"><img src="img/proyectos/5.Producto/9.jpg" alt="Producto" /></div>
-            <div class="single"><img src="img/proyectos/5.Producto/10.jpg" alt="Producto" /></div>
-            <div class="phrase">
-                <ul>
-                    <li>Estilismo & Fotografia</li>
-                    <li>Clientes: Ginger Jewerly • Kali Botanica • Paganas</li>
-                </ul>
-            </div>
-        </div>
-        <div id="ellas-exibit" class="exibit-gallery">
-            <div class="single spaced"><img src="img/proyectos/6.Ellas/1.jpg" alt="Ellas" /></div>
-            <div class="single spaced"><img src="img/proyectos/6.Ellas/2.jpg" alt="Ellas" /></div>
-            <div class="double"><img src="img/proyectos/6.Ellas/3.jpg" alt="Ellas" /></div>
-            <div class="single spaced"><img src="img/proyectos/6.Ellas/4.jpg" alt="Ellas" /></div>
-            <div class="single spaced"><img src="img/proyectos/6.Ellas/5.jpg" alt="Ellas" /></div>
-            <div class="single"><img src="img/proyectos/6.Ellas/6.jpg" alt="Ellas" /></div>
-            <div class="single"><img src="img/proyectos/6.Ellas/7.jpg" alt="Ellas" /></div>
-            <div class="double spaced"><img src="img/proyectos/6.Ellas/8.jpg" alt="Ellas" /></div>
-            <div class="double"><img src="img/proyectos/6.Ellas/9.jpg" alt="Ellas" /></div>
-            <div class="single"><img src="img/proyectos/6.Ellas/10.jpg" alt="Ellas" /></div>
-            <div class="single"><img src="img/proyectos/6.Ellas/11.jpg" alt="Ellas" /></div>
-        </div>
-        <div id="blanco_y_negro-exibit" class="exibit-gallery">
-            <div class="double"><img src="img/proyectos/7.BlancoYNegro/1.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/2.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/3.jpg" alt="Blanco Y Negro" /></div>
-            <div class="double"><img src="img/proyectos/7.BlancoYNegro/4.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/5.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/6.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/7.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/8.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/9.jpg" alt="Blanco Y Negro" /></div>
-            <div class="single"><img src="img/proyectos/7.BlancoYNegro/10.jpg" alt="Blanco Y Negro" /></div>
-            <div class="phrase">
-                Me adentre en la fotografia analogica observando donde se posaba mi ojo, la cotidianidad era mi ciudad, la gente, en aquel entonces.
-            </div>
-        </div>
-        <div id="alimentos-exibit" class="exibit-gallery">
-            <div class="double spaced"><img src="img/proyectos/8.Alimentos/1.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/2.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/3.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/4.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/5.jpg" alt="Alimentos" /></div>
-            <div class="double spaced"><img src="img/proyectos/8.Alimentos/6.jpg" alt="Alimentos" /></div>
-            <div class="double"><img src="img/proyectos/8.Alimentos/7.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/8.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/9.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/10.jpg" alt="Alimentos" /></div>
-            <div class="single"><img src="img/proyectos/8.Alimentos/11.jpg" alt="Alimentos" /></div>
-            <div class="phrase">
-                <ul>
-                    <li>Estilismo & Fotografia</li>
-                    <li>Clientes: Cocinar es divertido • Luce Cocina</li>
-                </ul>
-            </div>
-        </div>
+        <div id="ginger-exibit" class="exibit-gallery"></div>
+        <div id="analogicas-exibit" class="exibit-gallery"></div>
+        <div id="woods-exibit" class="exibit-gallery"></div>
+        <div id="eucaliptus-exibit" class="exibit-gallery"></div>
+        <div id="producto-exibit" class="exibit-gallery"></div>
+        <div id="ellas-exibit" class="exibit-gallery"></div>
+        <div id="blanco_y_negro-exibit" class="exibit-gallery"></div>
+        <div id="alimentos-exibit" class="exibit-gallery"></div>
         <br/>
         <br/>
     </body>
