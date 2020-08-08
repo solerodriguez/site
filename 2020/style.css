@@ -96,7 +96,7 @@ a {
 
 .portada-02, .portada-04, .portada-05, .portada-06, .portada-07, .portada-08, .portada-09, .portada-10, .portada-11, .portada-12, .portada-13, .portada-01, .portada-03 {
     display: inline-block;
-    background: url('img/portada/portada.png') no-repeat;
+    background: url('img/portada.png') no-repeat;
     overflow: hidden;
     text-indent: -9999px;
     text-align: left; 
