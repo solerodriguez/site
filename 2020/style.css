@@ -100,6 +100,7 @@ a {
     overflow: hidden;
     text-indent: -9999px;
     text-align: left; 
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
 }
  
 .portada-01 { background-position: -1px -5091px; width: 325px; height: 487px; }
@@ -150,6 +151,7 @@ a {
     overflow: hidden;
     text-indent: -9999px;
     text-align: left;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
 }
  
 .projects-1 { background-position: -1px -0px; width: 300px; height: 449px; }
@@ -194,11 +196,13 @@ a {
     font-size: 2vh;
     max-width: 800px;
 }
+
 .phrase ul {
     list-style-type: none;
     padding-inline-start: 0px;
     padding-left: 0px;
 }
+
 .exibit-gallery {
     display: none;
     max-width: 800px;
@@ -211,6 +215,10 @@ a {
 
 .exibit-gallery div {
     padding-top: 30px;
+}
+
+.exibit-gallery div  img {
+    box-shadow: 0px 5px 12px 1px rgba(0,0,0,0.2);
 }
 
 .exibit-gallery .single {
@@ -289,5 +297,3 @@ a {
     }
     
 }
-
-
