@@ -21,116 +21,729 @@
                 "name":"Sole Rodriguez Fotografia"
             }
         </script>
-        <link rel='stylesheet' id='my-css'  href='style.css' type='text/css' media='all' />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="img/favicon.png">
-        <script>
-            var allExibits = ['food', 'fashion', 'project'];
-            function showOnly(exibitId) {
-                document.getElementById(exibitId + '-exibit').style.display = "block";
-                for (var i in allExibits) {
-                  if (allExibits[i] !== exibitId) {
-                    document.getElementById(allExibits[i] + '-exibit').style.display = "none"; 
-                  }
+        <style>
+            body {
+                border: 0px;
+                border: none;
+                background-color: #fff;
+                margin: 0 0 0 0;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            header {
+                max-width: 1200px;
+                padding-top: 4vh;
+                padding-bottom: 4vh;
+                margin: auto;
+                height: 65px;
+            }
+
+            #title {
+                float: left;
+                font-size: 2vh;
+                font-family: 'Playfair Display', serif;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 10px;
+            }
+
+            .menu_container {
+                font-size: 2vh;
+                float: right;
+                padding-top: 7px;
+            }
+
+            .menu {
+                margin: 0px auto;
+                display: block;
+                list-style-type: disc;
+            }
+
+            .menu li {
+                display: inline-block;
+                padding: 5px 35px;
+            }
+
+            /* Style the active/current link*/
+            a:active, a:hover,  a:focus, .selected_menu {
+                text-shadow: black 1px 0px 0px; 
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            #portada {
+                display: none;
+                max-width: 800px;
+                margin: auto;
+                padding-top: 4vh;
+            }
+
+            #portada1-exibit {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                max-height: 1100px;
+                margin-bottom: 20px;
+            }
+
+            #portada1-exibit :nth-child(1) {
+                margin-bottom: 10px;
+            }
+
+            #portada1-exibit :nth-child(3) {
+                margin-bottom: 27px;
+            }
+
+            .portada-small {
+                max-width: 400px;
+            }
+
+            .portada-large {
+                max-width: 500px;
+            }
+
+            #portada2-exibit {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                max-height: 2600px;
+            }
+
+            #portada2-exibit div {
+                max-width: 400px;
+                margin-bottom: 30px;
+            }
+
+            .portada-02, .portada-04, .portada-05, .portada-06, .portada-07, .portada-08, .portada-09, .portada-10, .portada-11, .portada-12, .portada-13, .portada-01, .portada-03 {
+                display: inline-block;
+                background: url('img/portada.png') no-repeat;
+                overflow: hidden;
+                text-indent: -9999px;
+                text-align: left; 
+                box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+            }
+            
+            .portada-01 { background-position: -1px -5091px; width: 325px; height: 487px; }
+            .portada-02 { background-position: -1px -0px; width: 425px; height: 679px; }
+            .portada-03 { background-position: -1px -5579px; width: 325px; height: 487px; }
+            .portada-04 { background-position: -1px -680px; width: 425px; height: 282px; }
+            .portada-05 { background-position: -1px -963px; width: 375px; height: 563px; }
+            .portada-06 { background-position: -1px -1527px; width: 375px; height: 563px; }
+            .portada-07 { background-position: -1px -2091px; width: 375px; height: 563px; }
+            .portada-08 { background-position: -1px -2655px; width: 375px; height: 233px; }
+            .portada-09 { background-position: -1px -2889px; width: 375px; height: 233px; }
+            .portada-10 { background-position: -1px -3123px; width: 375px; height: 563px; }
+            .portada-11 { background-position: -1px -3687px; width: 375px; height: 605px; }
+            .portada-12 { background-position: -1px -4293px; width: 375px; height: 233px; }
+            .portada-13 { background-position: -1px -4527px; width: 375px; height: 563px; }
+
+            #exibit {
+                max-width: 1200px;
+                margin: auto;
+                padding-top: 4vh;
+                text-align: left;
+                display: none;
+            }
+
+            #exibit div img {
+                width: 300px;
+                height: 450px;
+                padding-bottom: 2vh;
+            }
+
+            .projects {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: flex-start;
+                font-size: 2vh;
+            }
+            .project {
+                margin-left: 80px;
+                margin-right: 80px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                cursor: pointer;
+            }
+            .projects-1, .projects-2, .projects-3, .projects-4, .projects-5, .projects-6, .projects-7, .projects-8 {
+                display: inline-block;
+                background: url('img/proyectos/projects.png') no-repeat;
+                overflow: hidden;
+                text-indent: -9999px;
+                text-align: left;
+                box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+            }
+            
+            .projects-1 { background-position: -1px -0px; width: 300px; height: 449px; }
+            .projects-2 { background-position: -302px -0px; width: 300px; height: 449px; }
+            .projects-3 { background-position: -1px -450px; width: 300px; height: 449px; }
+            .projects-4 { background-position: -302px -450px; width: 300px; height: 449px; }
+            .projects-5 { background-position: -1px -900px; width: 300px; height: 449px; }
+            .projects-6 { background-position: -302px -900px; width: 300px; height: 449px; }
+            .projects-7 { background-position: -1px -1350px; width: 300px; height: 449px; }
+            .projects-8 { background-position: -302px -1350px; width: 300px; height: 449px; }
+
+            #contact {
+                display: none;
+                max-width: 800px;
+                margin: auto;
+                padding-top: 4vh;
+            }
+
+            #contact_c {
+                display: flex;
+                font-size: 2vh;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            #conact_image img {
+                width: 300px;
+            }
+
+            #contact_details {
+                align-self: flex-end;
+                text-align: left;
+            }
+
+            #contact_details ul {
+                list-style-type: none;
+            }
+
+            .phrase {
+                text-align: left;
+                font-size: 2vh;
+                max-width: 800px;
+            }
+
+            .phrase ul {
+                list-style-type: none;
+                padding-inline-start: 0px;
+                padding-left: 0px;
+            }
+
+            .exibit-gallery {
+                display: none;
+                max-width: 800px;
+                margin: auto;
+                padding-top: 30px;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .exibit-gallery div {
+                padding-top: 30px;
+            }
+
+            .exibit-gallery div  img {
+                box-shadow: 0px 5px 12px 1px rgba(0,0,0,0.2);
+            }
+
+            .exibit-gallery .single {
+                flex-grow: 1;
+                max-width: 375px;
+                text-align: center;
+            }
+
+            .exibit-gallery .double {
+                flex-grow: 2;
+            }
+
+            .spaced {
+                padding-bottom: 60px;
+            }
+
+            .fade-in {
+                opacity: 1;
+                animation-name: fadeInOpacity;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: 1s;
+            }
+
+            @keyframes fadeInOpacity {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
                 }
             }
+
+            .fade-out {
+                opacity: 0;
+                animation-name: fadeOutOpacity;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-out;
+                animation-duration: 1s;
+            }
+
+            @keyframes fadeOutOpacity {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            @media screen and (min-width: 0px) and (max-width: 700px) {
+                .menu_container {
+                    width: 100%;
+                    float: left;
+                }
+
+                .menu li {
+                    padding-right: 20px;
+                    padding-left: 10px;
+                }
+            }
+            @media screen and (min-width: 0px) and (max-width: 600px) {
+                #contact_details {
+                    width: 300px;
+                }
+
+                #contact_details ul {
+                    padding-left: 0px;
+                }
+            }
+
+            @media screen and (min-width: 0px) and (max-width: 800px) {
+                .exibit-gallery { 
+                    justify-content: center;
+                }
+
+                .exibit-gallery div {
+                    flex-grow: 2;
+                    width: 401px;
+                    text-align: center;
+                }
+                .exibit-gallery .single {
+                    max-width: 401px;
+                }
+
+                .exibit-gallery div img  {
+                    max-width: 375px;
+                }
+
+                #portada1-exibit {
+                    max-height: 2200px;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #portada2-exibit {
+                    max-height: 5200px;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #portada1-exibit :nth-child(1) {
+                    transform: scale(1.15);
+                    margin-bottom: 110px;
+                }
+                
+                #portada1-exibit :nth-child(2) {
+                    transform: scale(1.15);
+                    margin-bottom: 30px;
+                }
+
+                #portada1-exibit :nth-child(3) {
+                    margin-bottom: 0px;
+                    transform: scale(.8825);
+                }
+
+                #portada1-exibit :nth-child(4) {
+                    transform: scale(.8825);
+                }
+                
+            }
+
+        </style>
+        <script>
+            var galleries = {
+                "ginger": {
+                    "imageBasePath": "img/proyectos/1.Ginger/",
+                    "alt": "Ginger",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "double"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "12.jpg" , "mode": "double"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"}
+                    ]
+                },
+                "analogicas": {
+                    "imageBasePath": "img/proyectos/2.Analogicas/",
+                    "alt": "Analogicas",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"mode": "phrase", "lines" : [
+                            "No hay un espacio",
+                            "un bello espacio alrededor de nosotros",
+                            "hay cantidad de pequeños trozos de espacios"
+                        ]},
+                        {"path": "05.jpg" , "mode": "double"},
+                        {"path": "06.jpg" , "mode": "double"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"path": "12.jpg" , "mode": "single"}
+                    ]
+                },
+                "woods" : {
+                    "imageBasePath": "img/proyectos/3.IntoTheWoods/",
+                    "alt": "Into The Woods",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single spaced"},
+                        {"path": "02.jpg" , "mode": "single spaced"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "double"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"}
+                    ]
+                },
+                "eucaliptus" : {
+                    "imageBasePath": "img/proyectos/4.Eucaliptus/",
+                    "alt": "Eucaliptus",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "double"},
+                        {"path": "08.jpg" , "mode": "double"}
+                    ]
+                },
+                "producto" : {
+                    "imageBasePath": "img/proyectos/5.Producto/",
+                    "alt": "Producto",
+                    "images": [
+                        {"path": "1.jpg" , "mode": "single spaced"},
+                        {"path": "2.jpg" , "mode": "single spaced"},
+                        {"path": "3.jpg" , "mode": "single spaced"},
+                        {"path": "4.jpg" , "mode": "single spaced"},
+                        {"path": "5.jpg" , "mode": "single spaced"},
+                        {"path": "6.jpg" , "mode": "single spaced"},
+                        {"path": "7.jpg" , "mode": "single"},
+                        {"path": "8.jpg" , "mode": "single"},
+                        {"path": "9.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"mode": "phrase", "lines" : [
+                            "Estilismo & Fotografia",
+                            "Clientes: Ginger Jewerly • Kali Botanica • Paganas"
+                        ]}
+                    ]
+                },
+                "ellas" : {
+                    "imageBasePath": "img/proyectos/6.Ellas/",
+                    "alt": "Ellas",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single spaced"},
+                        {"path": "02.jpg" , "mode": "single spaced"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single spaced"},
+                        {"path": "06.jpg" , "mode": "single spaced"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single spaced"},
+                        {"path": "10.jpg" , "mode": "single spaced"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"path": "12.jpg" , "mode": "single"},
+                        {"path": "13.jpg" , "mode": "single"},
+                        {"path": "14.jpg" , "mode": "single"}
+                    ]
+                },
+                "buenos_aires" : {
+                    "imageBasePath": "img/proyectos/7.BuenosAires/",
+                    "alt": "Buenos Aires",
+                    "images": [
+                        {"path": "10.jpg" , "mode": "double"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "01.jpg" , "mode": "double"},
+                        {"mode": "phrase", "lines" : [
+                            "Me adentre en la fotografia analogica observando donde se posaba mi ojo, la cotidianidad era mi ciudad, la gente, en aquel entonces."
+                        ]}
+                    ]
+                },
+                "alimentos" : {
+                    "imageBasePath": "img/proyectos/8.Alimentos/",
+                    "alt": "Alimentos",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single spaced"},
+                        {"path": "02.jpg" , "mode": "single spaced"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single spaced"},
+                        {"path": "06.jpg" , "mode": "single spaced"},
+                        {"path": "07.jpg" , "mode": "double"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"mode": "phrase", "lines" : [
+                            "Estilismo & Fotografia",
+                            "Clientes: Cocinar es divertido • Luce Cocina"
+                        ]}
+                    ]
+                }
+            };
+            var sections = ['contact', 'portada','exibit', 'ginger-exibit', 'analogicas-exibit', 'woods-exibit', 'eucaliptus-exibit', 'producto-exibit', 'ellas-exibit', 'buenos_aires-exibit', 'alimentos-exibit'];
+            var menus = ['contact_menu', 'projects_menu', 'portada_menu'];
+
+            function selectMenu(selectedElement) {
+                var selectedClass = "selected_menu";
+                for (var i in menus) {
+                    if (selectedElement.id === menus[i]) {
+                        selectedElement.classList.add(selectedClass);        
+                    } else {
+                        document.getElementById(menus[i]).classList.remove(selectedClass);
+                    }
+                }
+            }
+
+            function buildGallery(exibitId) {
+                var gallery = galleries[exibitId];
+                var galleryView = document.getElementById(exibitId + "-exibit");
+
+                if (galleryView.childElementCount < 1) {
+                    for (const element of gallery.images) {
+                        var node = document.createElement("DIV");
+                        for (const mode of element.mode.split(" ")) {
+                            node.classList.add(mode);
+                        }
+                        if (element.mode == "phrase") {
+                            var ul = document.createElement("UL");
+                            for (const line of element.lines) {
+                                var li = document.createElement("LI");
+                                li.innerText = line;
+                                ul.appendChild(li);
+                            }
+                            node.appendChild(ul);
+                        } else {
+                            var image = document.createElement("IMG");
+                            image.src = gallery.imageBasePath + element.path;
+                            image.alt = gallery.alt;
+                            node.appendChild(image);
+                        }
+                        galleryView.appendChild(node);
+                    }    
+                }
+            }
+
+            function currentSection() {
+                var selected = 'portada';
+                var sectionOnHash = window.location.hash.slice(1);
+                if (sectionOnHash) {
+                    return sectionOnHash;
+                }
+                return selected;
+            }
+
+            function isSectionDisplayed(id) {
+                return getComputedStyle(document.getElementById(id)).display !== "none";
+            }
+
+            function currentlyVisibleSection() {
+                for (var i in sections) {
+                    if (isSectionDisplayed(sections[i])) {
+                        return sections[i];
+                    }
+                }
+                return null;
+            }
+
+            function navigate(selectedElement) {
+                var section = currentSection();
+                if (!isSectionDisplayed(section)) {
+                    var current = currentlyVisibleSection();
+                    if (!current) {
+                        fadeInSelectedSection();
+                    } else {
+                        fadeOutSection(current);
+                    }
+                    
+                }
+            }
+
+            function fadeOutSection(id) {
+                var element = document.getElementById(id)
+                element.classList.remove("fade-in");
+                element.classList.add("fade-out");
+            }
+
+            function fadeInSelectedSection() {
+                var container = document.getElementById(currentSection());
+                if (container.id.includes("-exibit")) {
+                    container.style.display = "flex";
+                    buildGallery(container.id.slice(0, container.id.indexOf('-')));
+                } else {
+                    container.style.display = "block";
+                }
+                container.classList.remove("fade-out");
+                container.classList.add("fade-in");
+            }
+
+            document.addEventListener("DOMContentLoaded", function(e) {
+                for (var i in sections) {
+                    var section = document.getElementById(sections[i]);
+                    section.addEventListener('animationend', function(e) {
+                        if (this.classList.contains("fade-out")) {
+                            this.style.display = "none";
+                            window.scrollTo(0, 0);
+                            fadeInSelectedSection();
+                        }
+                    });
+                }
+            });
+            window.addEventListener('hashchange', navigate);
+            window.addEventListener('load', navigate);
         </script>
     </head>
     <body>
-        <header class="headings">
-            <div id="title">solerodriguez</div>
+        <header>
+            <div id="title"><a id="portada_menu" href="#portada" onclick="selectMenu(this)">soledad rodriguez</a></div>
             <div class="menu_container">
                 <ul class="menu">
-                    <li><a href="#portfolio" >Portfolio</a></li>
-                    <li><a href="#story" >About</a></li>
-                    <li><a href="#analog" >Personal</a></li>
-                    <li><a href="#contact" >Contact</a></li>
+                    <li><a id="projects_menu" href="#exibit" onclick="selectMenu(this)">Proyectos</a></li>
+                    <li><a id="contact_menu" href="#contact" onclick="selectMenu(this)">Contacto</a></li>
                 </ul>
             </div>
         </header>
-        <div id="portfolio" class="menu headings">
-            <a name="portfolio" ></a>
-            <div id="portfolio_title" >portfolio</div>
+        <div id="portada" class="fade-in" >
+            <div id="portada1-exibit">
+                <div class="portada-small portada-01"></div>
+                <div class="portada-small portada-03"></div>
+                <div class="portada-large portada-02"></div>
+                <div class="portada-large portada-04"></div>
+            </div>
+            <div id="portada2-exibit">
+                <div class="portada-05"></div>
+                <div class="portada-07"></div>
+                <div class="portada-09"></div>
+                <div class="portada-11"></div>
+                <div class="portada-06"></div>
+                <div class="portada-08"></div>
+                <div class="portada-10"></div>
+                <div class="portada-12"></div>
+                <div class="portada-13"></div>
+            </div>
         </div>
-        <div id="gallery">
-            <div>
-                 <div class="submenu controls" />
-                    <button type="button" onclick="showOnly('fashion')" class="control">fashion</button>
-                    <button type="button" onclick="showOnly('food')" class="control">food</button>
-                    <button type="button" onclick="showOnly('project')" class="control">projects</button>
+        <div id="exibit" class="fade-in" >
+            <div id="projects-exibit" class="projects">
+                <div class="project">
+                    <a href="#ginger-exibit" onclick="buildGallery('ginger')">
+                        <div class="projects-1"></div>
+                        <div class="project_name" >Ginger Jewerly</div>
+                    </a>
                 </div>
-            </div>   
-        </div>
-        <div id="exibit">
-            <div id="food-exibit" class="windowContainer">
-                 <img src="portfolio/food/11food.jpg" alt="Food" />
-                 <img src="portfolio/food/12food.jpg" alt="Food" />
-                 <img src="portfolio/food/13food.jpg" alt="Food" />
-                 <img src="portfolio/food/14food.jpg" alt="Food" />
-                 <img src="portfolio/food/01food.jpg" alt="Food" />
-                 <img src="portfolio/food/02food.jpg" alt="Food" />
-                 <img src="portfolio/food/03food.jpg" alt="Food" />
-                 <img src="portfolio/food/04food.jpg" alt="Food" />
-                 <img src="portfolio/food/05food.jpg" alt="Food" />
-                 <img src="portfolio/food/06food.jpg" alt="Food" />
-                 <img src="portfolio/food/07food.jpg" alt="Food" />
-                 <img src="portfolio/food/08food.jpg" alt="Food" />
-                 <img src="portfolio/food/09food.jpg" alt="Food" />
-                 <img src="portfolio/food/10food.jpg" alt="Food" />
-            </div>
-            <div id="fashion-exibit" class="windowContainer">
-                 <img src="portfolio/fashion/01fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/02fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/03fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/04fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/05fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/06fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/07fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/08fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/09fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/10fashion.jpg" alt="Fashion" />
-                 <img src="portfolio/fashion/11fashion.jpg" alt="Fashion" />
-            </div>
-            <div id="project-exibit" class="windowContainer">
-                 <img src="portfolio/project/01project.jpg" alt="Project" />
-                 <img src="portfolio/project/02project.jpg" alt="Project" />
-                 <img src="portfolio/project/03project.jpg" alt="Project" />
-                 <img src="portfolio/project/04project.jpg" alt="Project" />
-                 <img src="portfolio/project/05project.jpg" alt="Project" />
-                 <img src="portfolio/project/06project.jpg" alt="Project" />
-                 <img src="portfolio/project/07project.jpg" alt="Project" />
-            </div>
-        </div>
-        <div id="story" class="section" >
-            <a name="story" ></a>
-            <div id="story_title" class="headings" >my story</div>
-            <p>
-                Soy Soledad Rodriguez. Fotógrafa y Directora de Arte.<br>
-                Vivo en Buenos Aires donde desarrollo mi obra y trabajo como fotógrafa.<br>
-                Disfruto del sol que atraviesa mi ventana, mis plantas, mi hogar, la mirada de mi hijo y las historias encerradas en apenas un instante. <br>
-                Si queres contactar conmigo podes hacerlo aqui: hola@soledadrodriguez.com.ar
-            </p>
-            <p>
-                I'm Soledad Rodriguez. Photographer and art director.<br>
-                I live in Buenos Aires where I develop my art and work as a Photographer<br>
-                I enjoy the sun through my window, my plants, my home, my son's look and stories trapped in just an instant<br>
-                If you want to contact me you can do it here hola@soledadrodriguez.com.ar
-            </p>
-        </div>
-        <div id="memories" class="section headings">
-            <a name="analog" ></a>
-            <div id="memories_title" ><a href="http://cargocollective.com/solerodriguez/I" target="_blank">analog memories</a></div>
-        </div>
-        <div id="contact" class="section headings">
-            <a name="contact" ></a>
-            <div id="contact_title" >get in touch</div>
-            <div class="paragraph"></div>
-            <div class="paragraph">
-                Fotografía &amp; Dirección de Arte <br>
-                <a href="mailto:hola@solerodriguez.com.ar" target="_blank" class="mail">hola@solerodriguez.com.ar</a><br><br>
-                <a href="https://www.instagram.com/m.sole.rodriguez"  target="_blank"><div class="instagram" ></div></a>
-                <br>
+                <div class="project">
+                    <a href="#analogicas-exibit" onclick="buildGallery('analogicas')">
+                        <div class="projects-2"></div>
+                        <div class="project_name" >Analogicas</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#woods-exibit" onclick="buildGallery('woods')">
+                        <div class="projects-3"></div>
+                        <div class="project_name" >Into the woods</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#eucaliptus-exibit" onclick="buildGallery('eucaliptus')">
+                        <div class="projects-4"></div>
+                        <div class="project_name" >Eucaliptus</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#producto-exibit" onclick="buildGallery('producto')">
+                        <div class="projects-5"></div>
+                        <div class="project_name" >Producto</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#ellas-exibit" onclick="buildGallery('ellas')">
+                        <div class="projects-6"></div>
+                        <div class="project_name" >Ellas</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#buenos_aires-exibit" onclick="buildGallery('buenos_aires')">
+                        <div class="projects-7"></div>
+                        <div class="project_name" >Buenos Aires</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#alimentos-exibit" onclick="buildGallery('alimentos')">
+                        <div class="projects-8"></div>
+                        <div class="project_name" >Alimentos</div>
+                    </a>
+                </div>
             </div>
         </div>
+        <div id="contact" class="fade-in">
+            <div id="contact_c">
+                <div id="conact_image">
+                    <img class="conact_image" src="img/contact.jpg" alt="Contact" />
+                </div>
+                <div id="contact_details">
+                    <ul>
+                        <li>Foto + Arte</li>
+                        <li>Buenas Aires</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li><a href="mailto:hola@solerodriguez.com.ar" target="_blank" class="mail">hola@solerodriguez.com.ar</a></li>
+                        <li>&nbsp;</li>
+                        <li><a href="https://www.instagram.com/m.sole.rodriguez/" target="_blank" class="mail">instagram @m.sole.rodriguez</a></li>
+                    </ul>
+                </div>
+                <br/>
+                <br/>
+            </div>
+        </div>
+        <div id="ginger-exibit" class="exibit-gallery fade-in"></div>
+        <div id="analogicas-exibit" class="exibit-gallery fade-in"></div>
+        <div id="woods-exibit" class="exibit-gallery fade-in"></div>
+        <div id="eucaliptus-exibit" class="exibit-gallery fade-in"></div>
+        <div id="producto-exibit" class="exibit-gallery fade-in"></div>
+        <div id="ellas-exibit" class="exibit-gallery fade-in"></div>
+        <div id="buenos_aires-exibit" class="exibit-gallery fade-in"></div>
+        <div id="alimentos-exibit" class="exibit-gallery fade-in"></div>
+        <br/>
+        <br/>
     </body>
 <html>
