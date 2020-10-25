@@ -173,7 +173,7 @@
                 padding-bottom: 50px;
                 cursor: pointer;
             }
-            .projects-1, .projects-2, .projects-3, .projects-4, .projects-5, .projects-6, .projects-7, .projects-8 {
+            .projects-1, .projects-2, .projects-3, .projects-4, .projects-5, .projects-6, .projects-7, .projects-8, .projects-9, .projects-10 {
                 display: inline-block;
                 background: url('img/proyectos/projects.png') no-repeat;
                 overflow: hidden;
@@ -190,6 +190,8 @@
             .projects-6 { background-position: -302px -900px; width: 300px; height: 449px; }
             .projects-7 { background-position: -1px -1350px; width: 300px; height: 449px; }
             .projects-8 { background-position: -302px -1350px; width: 300px; height: 449px; }
+            .projects-9 { background-position: -0px -1800px; width: 300px; height: 449px; }
+            .projects-10 { background-position: -300px -1800px; width: 300px; height: 449px; }
 
             #contact {
                 display: none;
@@ -521,9 +523,46 @@
                             "Clientes: Cocinar es divertido • Luce Cocina"
                         ]}
                     ]
+                },
+                "paloma" : {
+                    "imageBasePath": "img/proyectos/9.Paloma/",
+                    "alt": "Paloma Marquez",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "single"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                    ]
+                },
+                "ramon" : {
+                    "imageBasePath": "img/proyectos/10.Ramon/",
+                    "alt": "Ramon",
+                    "images": [
+                        {"path": "01.jpg" , "mode": "single"},
+                        {"path": "02.jpg" , "mode": "single"},
+                        {"path": "03.jpg" , "mode": "double"},
+                        {"path": "04.jpg" , "mode": "single"},
+                        {"path": "05.jpg" , "mode": "single"},
+                        {"path": "06.jpg" , "mode": "single"},
+                        {"path": "07.jpg" , "mode": "single"},
+                        {"path": "08.jpg" , "mode": "single"},
+                        {"path": "09.jpg" , "mode": "single"},
+                        {"path": "10.jpg" , "mode": "single"},
+                        {"path": "11.jpg" , "mode": "single"},
+                        {"path": "12.jpg" , "mode": "single"},
+                        {"path": "13.jpg" , "mode": "single"},
+                        {"mode": "phrase", "lines" : [
+                            "Foto Producto",
+                            "Cliente: Ramon Cinturones"
+                        ]}
+                    ]
                 }
             };
-            var sections = ['contact', 'portada','exibit', 'ginger-exibit', 'analogicas-exibit', 'woods-exibit', 'eucaliptus-exibit', 'producto-exibit', 'ellas-exibit', 'buenos_aires-exibit', 'alimentos-exibit'];
+            var sections = ['contact', 'portada','exibit', 'ginger-exibit', 'analogicas-exibit', 'woods-exibit', 'eucaliptus-exibit', 'producto-exibit', 'ellas-exibit', 'buenos_aires-exibit', 'alimentos-exibit', 'paloma-exibit', 'ramon-exibit' ];
             var menus = ['contact_menu', 'projects_menu', 'portada_menu'];
 
             function selectMenu(selectedElement) {
@@ -703,6 +742,18 @@
                     </a>
                 </div>
                 <div class="project">
+                    <a href="#paloma-exibit" onclick="buildGallery('paloma')">
+                        <div class="projects-9"></div>
+                        <div class="project_name" >Paloma Marquez</div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#ramon-exibit" onclick="buildGallery('ramon')">
+                        <div class="projects-10"></div>
+                        <div class="project_name" >Ramon</div>
+                    </a>
+                </div>
+                <div class="project">
                     <a href="#buenos_aires-exibit" onclick="buildGallery('buenos_aires')">
                         <div class="projects-7"></div>
                         <div class="project_name" >Buenos Aires</div>
@@ -744,6 +795,8 @@
         <div id="ellas-exibit" class="exibit-gallery fade-in"></div>
         <div id="buenos_aires-exibit" class="exibit-gallery fade-in"></div>
         <div id="alimentos-exibit" class="exibit-gallery fade-in"></div>
+        <div id="paloma-exibit" class="exibit-gallery fade-in"></div>
+        <div id="ramon-exibit" class="exibit-gallery fade-in"></div>
         <br/>
         <br/>
     </body>
