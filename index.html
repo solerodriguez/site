@@ -1,803 +1,562 @@
 <!DOCTYPE html>
-<html lang="es-AR" prefix="og: http://ogp.me/ns#">
-    <head>
-        <title>Sole Rodriguez</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:locale" content="es_AR" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Sole Rodriguez Fotografia" />
-        <meta property="og:description" content="Sole Rodriguez Fotografia" />
-        <meta property="og:url" content="https://www.solerodriguez.com.ar" />
-        <meta name="google-site-verification" content="s_qYIfLbmRBgQ6OcrmFH8Czh0-7UdbFvjop3cYEXW-8" />
-        <meta property="og:site_name" content="Sole Rodriguez Fotografia" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content="Sole Rodriguez Fotografia" />
-        <meta name="twitter:title" content="Sole Rodriguez Fotografia" />
-        <script type='application/ld+json'>
-            {
-                "@context":"http:\/\/schema.org",
-                "@type":"WebSite",
-                "url":"https:\/\/www.solerodriguez.com.ar\/",
-                "name":"Sole Rodriguez Fotografia"
-            }
-        </script>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="img/favicon.png">
-        <style>
-            body {
-                border: 0px;
-                border: none;
-                background-color: #fff;
-                margin: 0 0 0 0;
-                font-family: 'Montserrat', sans-serif;
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Espacio de yoga en Tandil. Clases de yoga integral, yoga nidra y yoga para embarazadas. Horarios flexibles y grupos reducidos. Conecta con tu cuerpo y mente a través del yoga.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Host+Grotesk:ital,wght@0,300;1,300&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    <title>kalé kalé yoga</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #6a6a65;
+            background-color: #e9e8e5;
+        }
+
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(103, 127, 87, 0.8);
+            
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: "Source Code Pro", monospace;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+        .main-title {
+            font-family: "Source Code Pro", monospace;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+            word-spacing: 20px;
+        }
+
+        .sub-text {
+            font-family: "Bodoni Moda", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            font-family: "Source Code Pro", monospace;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: url('img/background-header.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .spacer {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-section-odd {
+            padding: 4rem 0;
+            background-color: #e2e0d9;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            font-family: "Bodoni Moda", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            /*gap: 2rem;*/
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            color: #4a4747;
+            padding-bottom: 2rem;
+            font-family: "Source Code Pro", monospace;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .spaced-card{
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+
+        .card img {
+            width:100%;
+            margin-bottom: 1rem;
+        }
+
+        .card-groups {
+            color: #6a6a65;
+            padding-bottom: 2rem;
+            font-family: "Host Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 1;
+            text-align: center;
+        }
+
+        .card-title {
+            margin-bottom: 1rem;
+        }
+
+        .section-content {
+            gap: 3rem;
+            align-items: left;
+
+            font-family: "Host Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 1;
+            font-style: normal;
+        }
+
+        .content-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .content-with-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(226, 224, 217);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: "Host Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            background-color: #e2e0d9;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #6a6a65;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: green;
+        }
+
+        /* Tablet (768px - 1024px) */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2rem;
             }
 
-            header {
-                max-width: 1200px;
-                padding-top: 4vh;
-                padding-bottom: 4vh;
-                margin: auto;
-                height: 65px;
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
 
-            #title {
-                float: left;
-                font-size: 2vh;
-                font-family: 'Playfair Display', serif;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                padding: 10px;
+            .content-with-image {
+                gap: 2rem;
             }
 
-            .menu_container {
-                font-size: 2vh;
-                float: right;
-                padding-top: 7px;
+            .spaced-card{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+
+        /* Tablet pequeña y móvil grande (481px - 768px) */
+        @media (max-width: 768px) {
+            header .container {
+                justify-content: space-between;
             }
 
-            .menu {
-                margin: 0px auto;
+            .menu-toggle {
                 display: block;
-                list-style-type: disc;
             }
 
-            .menu li {
-                display: inline-block;
-                padding: 5px 35px;
+            nav {
+                width: 100%;
+                order: 3;
             }
 
-            /* Style the active/current link*/
-            a:active, a:hover,  a:focus, .selected_menu {
-                text-shadow: black 1px 0px 0px; 
-            }
-
-            a {
-                text-decoration: none;
-                color: black;
-            }
-
-            #portada {
+            nav ul {
                 display: none;
-                max-width: 800px;
-                margin: auto;
-                padding-top: 4vh;
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem 0;
+                gap: 0.5rem;
             }
 
-            #portada1-exibit {
+            nav ul.active {
                 display: flex;
-                flex-flow: column wrap;
-                justify-content: space-between;
-                align-items: flex-start;
-                max-height: 1100px;
-                margin-bottom: 20px;
             }
 
-            #portada1-exibit :nth-child(1) {
-                margin-bottom: 10px;
+            .hero h1 {
+                font-size: 1.8rem;
             }
 
-            #portada1-exibit :nth-child(3) {
-                margin-bottom: 27px;
+            .hero p {
+                font-size: 1rem;
             }
 
-            .portada-small {
-                max-width: 400px;
+            .content-with-image {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .portada-large {
-                max-width: 500px;
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .spaced-card{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+
+        /* Móvil (hasta 480px) */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
             }
 
-            #portada2-exibit {
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: flex-start;
-                align-items: flex-start;
-                max-height: 2600px;
+            .hero {
+                padding: 2rem 0;
             }
 
-            #portada2-exibit div {
-                max-width: 400px;
-                margin-bottom: 30px;
+            .hero h1 {
+                font-size: 1.5rem;
             }
 
-            .portada-02, .portada-04, .portada-05, .portada-06, .portada-07, .portada-08, .portada-09, .portada-10, .portada-11, .portada-12, .portada-13, .portada-01, .portada-03 {
-                display: inline-block;
-                background: url('img/portada.png') no-repeat;
-                overflow: hidden;
-                text-indent: -9999px;
-                text-align: left; 
-                box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+            .hero p {
+                font-size: 0.9rem;
             }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+            .spaced-card{
+                margin-left: 0rem;
+                margin-right: 0rem;
+            }
+            .content-section {
+                padding: 2rem 0;
+            }
+
+            .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">kalé kalé yoga</div>
+            <button class="menu-toggle" aria-label="Menú" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#tipos">Yoga</a></li>
+                    <li><a href="#espacio">Espacio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <p class="spacer">&nbsp;</p>
+            <p class="spacer">&nbsp;</p>
+            <p class="spacer">&nbsp;</p>
+            <p class="spacer">&nbsp;</p>
+            <p class="spacer">&nbsp;</p>
+            <h1 class="main-title" >kalé kalé <strong><b>yoga</b></strong></h1>
+            <p class="sub-text">¨Toda práctica que  es  beneficiosa a largo plazo, lleva su tiempo.</p>
+            <p class="sub-text">Ten paciencia con el proceso¨</p>
             
-            .portada-01 { background-position: -1px -5091px; width: 325px; height: 487px; }
-            .portada-02 { background-position: -1px -0px; width: 425px; height: 679px; }
-            .portada-03 { background-position: -1px -5579px; width: 325px; height: 487px; }
-            .portada-04 { background-position: -1px -680px; width: 425px; height: 282px; }
-            .portada-05 { background-position: -1px -963px; width: 375px; height: 563px; }
-            .portada-06 { background-position: -1px -1527px; width: 375px; height: 563px; }
-            .portada-07 { background-position: -1px -2091px; width: 375px; height: 563px; }
-            .portada-08 { background-position: -1px -2655px; width: 375px; height: 233px; }
-            .portada-09 { background-position: -1px -2889px; width: 375px; height: 233px; }
-            .portada-10 { background-position: -1px -3123px; width: 375px; height: 563px; }
-            .portada-11 { background-position: -1px -3687px; width: 375px; height: 605px; }
-            .portada-12 { background-position: -1px -4293px; width: 375px; height: 233px; }
-            .portada-13 { background-position: -1px -4527px; width: 375px; height: 563px; }
+        </div>
+    </section>
 
-            #exibit {
-                max-width: 1200px;
-                margin: auto;
-                padding-top: 4vh;
-                text-align: left;
-                display: none;
-            }
+    <section class="content-section" id="tipos">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <img src="img/yoga-integral.jpg" alt="Yoga Integral" style="width:100%; margin-bottom: 1rem;">
+                    <p>yoga integral</p>
+                </div>
+                <div class="card">
+                    <img src="img/yoga-nidra.jpg" alt="Yoga Nidra" style="width:100%; margin-bottom: 1rem;">
+                    <p>yoga nidra</p>
+                </div>
+                <div class="card">
+                    <img src="img/yoga-embarazo.jpg" alt="Yoga & Embarazo" style="width:100%; margin-bottom: 1rem;">
+                    <p>yoga & embarazo</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            #exibit div img {
-                width: 300px;
-                height: 450px;
-                padding-bottom: 2vh;
-            }
+    <section class="content-section" id="yoga-integral">
+        <div class="container">
+            <h2 class="section-title">Yoga integral</h2>
+            <div class="grid">
+                <div class="card spaced-card">
+                    <img src="img/yoga-integral-1.jpg" style="width:100%; margin-bottom: 1rem;">
+                </div>
+                <div class="card spaced-card">
+                    <img src="img/yoga-integral-2.jpg" style="width:100%; margin-bottom: 1rem;">
+                </div>
+            </div>
+            <div class="section-content">
+                <p>Son prácticas dinámicas, donde el foco está puesto en la alineación, el estiramiento del cuerpo y la respiración.</p>
+                <p>Cada asana o postura está conectada con órganos específicos, zonas del cuerpo y también con aspectos emocionales.</p>
+                <p>La meditación y las visualizaciones ocupan un lugar fundamental en lo que propongo: herramientas para habitar el presente, calmar la mente y profundizar en la experiencia corporal y en la conciencia.</p>
+                <p>Es importante recordar que el yoga no se trata solo de posturas. Es una invitación a estar PRESENTES, a observar nuestro diálogo interno y, con el acompañamiento de la respiración, llevar más consciencia a la manera en que nos relacionamos con nosotros mismos.</p>
+            </div>
+        </div>
+        <div class="container">&nbsp; </div>
+    </section>
 
-            .projects {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-                align-items: flex-start;
-                font-size: 2vh;
-            }
-            .project {
-                margin-left: 80px;
-                margin-right: 80px;
-                padding-top: 50px;
-                padding-bottom: 50px;
-                cursor: pointer;
-            }
-            .projects-1, .projects-2, .projects-3, .projects-4, .projects-5, .projects-6, .projects-7, .projects-8, .projects-9, .projects-10 {
-                display: inline-block;
-                background: url('img/proyectos/projects.png') no-repeat;
-                overflow: hidden;
-                text-indent: -9999px;
-                text-align: left;
-                box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
-            }
-            
-            .projects-1 { background-position: -1px -0px; width: 300px; height: 449px; }
-            .projects-2 { background-position: -302px -0px; width: 300px; height: 449px; }
-            .projects-3 { background-position: -1px -450px; width: 300px; height: 449px; }
-            .projects-4 { background-position: -302px -450px; width: 300px; height: 449px; }
-            .projects-5 { background-position: -1px -900px; width: 300px; height: 449px; }
-            .projects-6 { background-position: -302px -900px; width: 300px; height: 449px; }
-            .projects-7 { background-position: -1px -1350px; width: 300px; height: 449px; }
-            .projects-8 { background-position: -302px -1350px; width: 300px; height: 449px; }
-            .projects-9 { background-position: -0px -1800px; width: 300px; height: 449px; }
-            .projects-10 { background-position: -300px -1800px; width: 300px; height: 449px; }
+    <section class="content-section" id="yoga-nidra">
+        <div class="container">
+            <h2 class="section-title">Yoga Nidra</h2>
+            <div class="section-content">
+                <p>Es una técnica de relajación y meditación profunda, conocida como el  “sueño yóguico”, ya que nos guía hacia un estado de conciencia entre la vigilia y el sueño.</p>
+                <p>Durante la práctica, el cuerpo permanece completamente relajado, mientras la mente se mantiene alerta y consciente.</p>
+                <p>No se requiere concentración activa, sino una atención suave, pasiva y receptiva.</p>
+                <p>Yoga Nidra se practica acostado, en quietud, permitiendo que la experiencia nos lleve hacia una profunda introspección y descanso interior.</p>
+                <p>Entre sus beneficios se encuentran: la reducción del estrés y la ansiedad, la mejora del sueño, y la liberación de tensiones físicas, emocionales y mentales.</p>
+                <p>Esta práctica la compartimos una vez al mes con el grupo, como un espacio de pausa, reconexión y descanso profundo.</p>
+            </div>
+        </div>
+    </section>
 
-            #contact {
-                display: none;
-                max-width: 800px;
-                margin: auto;
-                padding-top: 4vh;
-            }
+    <section class="content-section" id="yoga-embarazo">
+        <div class="container">
+            <h2 class="section-title">Yoga & Embarazo</h2>
+            <div class="section-content">
+                <p>A medida que el yoga te conecta con tu cuerpo y tu mente, también despierta la conciencia del ser que habita en tu interior, profundizando ese lazo esencial haciéndolo más profundo.</p>
+                <p>Desde lo físico, se trabaja en la apertura de caderas, el suelo pélvico, las piernas y la espalda, acompañando los cambios propios del embarazo con suavidad y presencia.</p>
+                <p>Las meditaciones están orientadas a fortalecer el vínculo entre la madre y el bebé, permitiendo que ambos se nutran de la energía vital del amor.</p>
+                <p>Las prácticas son personalizadas y se adaptan a las necesidades físicas y emocionales de cada embarazada, respetando su momento y su ritmo.</p>
+            </div>
+        </div>
+    </section>
 
-            #contact_c {
-                display: flex;
-                font-size: 2vh;
-                flex-flow: row wrap;
-                justify-content: center;
-                align-items: flex-start;
-            }
+    <section class="content-section-odd">
+        <div class="container">
+            <div class="grid">
+                <div class="card-groups">
+                    <p class="card-title">HORARIOS</p>
+                    <p>Martes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:00 am</p>
+                    <p>Miércoles&nbsp;&nbsp;&nbsp;18:30 pm</p>
+                    <p>Jueves&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8:00 am</p>
+                </div>
+                <div class="card-groups">
+                    <p class="card-title">ARANCEL</p>
+                    <p>Clase Suelta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$18.000.</p>
+                    <p>4 Clases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$50.000.</p>
+                    <p>8 Clases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$63.000.</p>
+                </div>
+            </div>
+            <div class="section-content">
+                <p>Los grupos de las prácticas son reducidos un max de 5 personas.</p>
+                <p>&nbsp;</p>
+                <p>Si el horario actual de las prácticas no te funciona, escribime. Hay posibilidad de abrir nuevos horarios a partir de un mínimo de 3 practicantes. </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-section" id="espacio">
+        <div class="container">
+            <h2 class="section-title">Espacio</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="img/espacio.jpg" style="width:100%; margin-bottom: 1rem;">
+                </div>
+            </div>
+            <div class="section-content">
+                <p>Kalé Kalé es una expresión tibetana que significa “despacio, despacio”.</p>
+                <p>Desde el momento en que escuché estas palabras, quedaron grabadas en mi memoria. Me acompañan en cada acto cotidiano, en mis prácticas personales y en mis proyectos,recordándome que no es necesario dejarse arrastrar por los ritmos acelerados de la vida moderna.</p>
+                <p>Mi maestro suele decir: “Toda práctica que sea verdaderamente beneficiosa a largo plazo requiere tiempo. Ten paciencia con el proceso.” Y así lo vivo: paso a paso, día a día, con microajustes que hacen la diferencia y que precisa  de habituación.</p>
+                <p>Esa misma motivación es la que me gustaría que cada practicante pueda llevar a su práctica.</p>
+                <p>Recordar que el beneficio no es solo personal, sino que también se irradia hacia todos los seres. Cuando algo es bueno para uno, poder compartirlo es un privilegio.</p>
+                <p>Este espacio nace desde ese deseo: un lugar con la energía de la intimidad, la calma y la gratitud.</p>
+    
+            </div>
+        </div>
+    </section>
 
-            #conact_image img {
-                width: 300px;
-            }
+    <section class="content-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="grid">
+                <div class="card spaced-card">
+                    <img src="img/contacto-1.jpg" style="width:100%; margin-bottom: 1rem;">
+                </div>
+                <div class="card spaced-card">
+                    <img src="img/contacto-2.jpg" style="width:100%; margin-bottom: 1rem;">
+                </div>
+            </div>
+            <div class="section-content">
+                <p>Hola, mi nombre es Soledad. Soy Instructora de Yoga.</p>
+                <p>El yoga llegó a mi vida como una práctica física, pero con el tiempo se transformó en un espacio profundo de exploración, conexión interna y autoconocimiento.</p>
+                <p>Hace algunos años comencé a estudiar filosofía budista y meditación. Con el tiempo, esa mirada fue impregnando de manera natural mi forma de vivir y enseñar el yoga.</p>    
+            </div>
+        </div>
+    </section>
 
-            #contact_details {
-                align-self: flex-end;
-                text-align: left;
-            }
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    Barrio Graduados, Tandil | <a href="mailto:rodriguez.m.soledad27@gmail.com">rodriguez.m.soledad27@gmail.com</a> | <a href="https://wa.me/541168457242">Whatsapp: 1168457242</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            #contact_details ul {
-                list-style-type: none;
-            }
-
-            .phrase {
-                text-align: left;
-                font-size: 2vh;
-                max-width: 800px;
-            }
-
-            .phrase ul {
-                list-style-type: none;
-                padding-inline-start: 0px;
-                padding-left: 0px;
-            }
-
-            .exibit-gallery {
-                display: none;
-                max-width: 800px;
-                margin: auto;
-                padding-top: 30px;
-                flex-flow: row wrap;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .exibit-gallery div {
-                padding-top: 30px;
-            }
-
-            .exibit-gallery div  img {
-                box-shadow: 0px 5px 12px 1px rgba(0,0,0,0.2);
-            }
-
-            .exibit-gallery .single {
-                flex-grow: 1;
-                max-width: 375px;
-                text-align: center;
-            }
-
-            .exibit-gallery .double {
-                flex-grow: 2;
-            }
-
-            .spaced {
-                padding-bottom: 60px;
-            }
-
-            .fade-in {
-                opacity: 1;
-                animation-name: fadeInOpacity;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in;
-                animation-duration: 1s;
-            }
-
-            @keyframes fadeInOpacity {
-                0% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-
-            .fade-out {
-                opacity: 0;
-                animation-name: fadeOutOpacity;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-out;
-                animation-duration: 1s;
-            }
-
-            @keyframes fadeOutOpacity {
-                0% {
-                    opacity: 1;
-                }
-                100% {
-                    opacity: 0;
-                }
-            }
-
-            @media screen and (min-width: 0px) and (max-width: 700px) {
-                .menu_container {
-                    width: 100%;
-                    float: left;
-                }
-
-                .menu li {
-                    padding-right: 20px;
-                    padding-left: 10px;
-                }
-            }
-            @media screen and (min-width: 0px) and (max-width: 600px) {
-                #contact_details {
-                    width: 300px;
-                }
-
-                #contact_details ul {
-                    padding-left: 0px;
-                }
-            }
-
-            @media screen and (min-width: 0px) and (max-width: 800px) {
-                .exibit-gallery { 
-                    justify-content: center;
-                }
-
-                .exibit-gallery div {
-                    flex-grow: 2;
-                    width: 401px;
-                    text-align: center;
-                }
-                .exibit-gallery .single {
-                    max-width: 401px;
-                }
-
-                .exibit-gallery div img  {
-                    max-width: 375px;
-                }
-
-                #portada1-exibit {
-                    max-height: 2200px;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                #portada2-exibit {
-                    max-height: 5200px;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                #portada1-exibit :nth-child(1) {
-                    transform: scale(1.15);
-                    margin-bottom: 110px;
-                }
-                
-                #portada1-exibit :nth-child(2) {
-                    transform: scale(1.15);
-                    margin-bottom: 30px;
-                }
-
-                #portada1-exibit :nth-child(3) {
-                    margin-bottom: 0px;
-                    transform: scale(.8825);
-                }
-
-                #portada1-exibit :nth-child(4) {
-                    transform: scale(.8825);
-                }
-                
-            }
-
-        </style>
-        <script>
-            var galleries = {
-                "ginger": {
-                    "imageBasePath": "img/proyectos/1.Ginger/",
-                    "alt": "Ginger",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single"},
-                        {"path": "02.jpg" , "mode": "single"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "single"},
-                        {"path": "06.jpg" , "mode": "single"},
-                        {"path": "07.jpg" , "mode": "double"},
-                        {"path": "08.jpg" , "mode": "single"},
-                        {"path": "09.jpg" , "mode": "single"},
-                        {"path": "12.jpg" , "mode": "double"},
-                        {"path": "10.jpg" , "mode": "single"},
-                        {"path": "11.jpg" , "mode": "single"}
-                    ]
-                },
-                "analogicas": {
-                    "imageBasePath": "img/proyectos/2.Analogicas/",
-                    "alt": "Analogicas",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single"},
-                        {"path": "02.jpg" , "mode": "single"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"mode": "phrase", "lines" : [
-                            "No hay un espacio",
-                            "un bello espacio alrededor de nosotros",
-                            "hay cantidad de pequeños trozos de espacios"
-                        ]},
-                        {"path": "05.jpg" , "mode": "double"},
-                        {"path": "06.jpg" , "mode": "double"},
-                        {"path": "07.jpg" , "mode": "single"},
-                        {"path": "08.jpg" , "mode": "single"},
-                        {"path": "09.jpg" , "mode": "single"},
-                        {"path": "10.jpg" , "mode": "single"},
-                        {"path": "11.jpg" , "mode": "single"},
-                        {"path": "12.jpg" , "mode": "single"}
-                    ]
-                },
-                "woods" : {
-                    "imageBasePath": "img/proyectos/3.IntoTheWoods/",
-                    "alt": "Into The Woods",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single spaced"},
-                        {"path": "02.jpg" , "mode": "single spaced"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "double"},
-                        {"path": "06.jpg" , "mode": "single"},
-                        {"path": "07.jpg" , "mode": "single"},
-                        {"path": "08.jpg" , "mode": "single"},
-                        {"path": "09.jpg" , "mode": "single"}
-                    ]
-                },
-                "eucaliptus" : {
-                    "imageBasePath": "img/proyectos/4.Eucaliptus/",
-                    "alt": "Eucaliptus",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single"},
-                        {"path": "02.jpg" , "mode": "single"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "single"},
-                        {"path": "06.jpg" , "mode": "single"},
-                        {"path": "07.jpg" , "mode": "double"},
-                        {"path": "08.jpg" , "mode": "double"}
-                    ]
-                },
-                "producto" : {
-                    "imageBasePath": "img/proyectos/5.Producto/",
-                    "alt": "Producto",
-                    "images": [
-                        {"path": "1.jpg" , "mode": "single spaced"},
-                        {"path": "2.jpg" , "mode": "single spaced"},
-                        {"path": "3.jpg" , "mode": "single spaced"},
-                        {"path": "4.jpg" , "mode": "single spaced"},
-                        {"path": "5.jpg" , "mode": "single spaced"},
-                        {"path": "6.jpg" , "mode": "single spaced"},
-                        {"path": "7.jpg" , "mode": "single"},
-                        {"path": "8.jpg" , "mode": "single"},
-                        {"path": "9.jpg" , "mode": "single"},
-                        {"path": "10.jpg" , "mode": "single"},
-                        {"mode": "phrase", "lines" : [
-                            "Estilismo & Fotografia",
-                            "Clientes: Ginger Jewerly • Kali Botanica • Paganas"
-                        ]}
-                    ]
-                },
-                "ellas" : {
-                    "imageBasePath": "img/proyectos/6.Ellas/",
-                    "alt": "Ellas",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single spaced"},
-                        {"path": "02.jpg" , "mode": "single spaced"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "single spaced"},
-                        {"path": "06.jpg" , "mode": "single spaced"},
-                        {"path": "07.jpg" , "mode": "single"},
-                        {"path": "08.jpg" , "mode": "single"},
-                        {"path": "09.jpg" , "mode": "single spaced"},
-                        {"path": "10.jpg" , "mode": "single spaced"},
-                        {"path": "11.jpg" , "mode": "single"},
-                        {"path": "12.jpg" , "mode": "single"},
-                        {"path": "13.jpg" , "mode": "single"},
-                        {"path": "14.jpg" , "mode": "single"}
-                    ]
-                },
-                "buenos_aires" : {
-                    "imageBasePath": "img/proyectos/7.BuenosAires/",
-                    "alt": "Buenos Aires",
-                    "images": [
-                        {"path": "10.jpg" , "mode": "double"},
-                        {"path": "02.jpg" , "mode": "single"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "single"},
-                        {"path": "06.jpg" , "mode": "single"},
-                        {"path": "07.jpg" , "mode": "single"},
-                        {"path": "08.jpg" , "mode": "single"},
-                        {"path": "09.jpg" , "mode": "single"},
-                        {"path": "01.jpg" , "mode": "double"},
-                        {"mode": "phrase", "lines" : [
-                            "Me adentre en la fotografia analogica observando donde se posaba mi ojo, la cotidianidad era mi ciudad, la gente, en aquel entonces."
-                        ]}
-                    ]
-                },
-                "alimentos" : {
-                    "imageBasePath": "img/proyectos/8.Alimentos/",
-                    "alt": "Alimentos",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single spaced"},
-                        {"path": "02.jpg" , "mode": "single spaced"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "single spaced"},
-                        {"path": "06.jpg" , "mode": "single spaced"},
-                        {"path": "07.jpg" , "mode": "double"},
-                        {"path": "08.jpg" , "mode": "single"},
-                        {"path": "09.jpg" , "mode": "single"},
-                        {"path": "10.jpg" , "mode": "single"},
-                        {"path": "11.jpg" , "mode": "single"},
-                        {"mode": "phrase", "lines" : [
-                            "Estilismo & Fotografia",
-                            "Clientes: Cocinar es divertido • Luce Cocina"
-                        ]}
-                    ]
-                },
-                "paloma" : {
-                    "imageBasePath": "img/proyectos/9.Paloma/",
-                    "alt": "Paloma Marquez",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single"},
-                        {"path": "02.jpg" , "mode": "single"},
-                        {"path": "03.jpg" , "mode": "single"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "single"},
-                        {"path": "06.jpg" , "mode": "single"},
-                        {"path": "07.jpg" , "mode": "single"},
-                        {"path": "08.jpg" , "mode": "single"},
-                    ]
-                },
-                "ramon" : {
-                    "imageBasePath": "img/proyectos/10.Ramon/",
-                    "alt": "Ramon",
-                    "images": [
-                        {"path": "01.jpg" , "mode": "single"},
-                        {"path": "02.jpg" , "mode": "single"},
-                        {"path": "03.jpg" , "mode": "double"},
-                        {"path": "04.jpg" , "mode": "single"},
-                        {"path": "05.jpg" , "mode": "single"},
-                        {"path": "06.jpg" , "mode": "single"},
-                        {"path": "07.jpg" , "mode": "single"},
-                        {"path": "08.jpg" , "mode": "single"},
-                        {"path": "09.jpg" , "mode": "single"},
-                        {"path": "10.jpg" , "mode": "single"},
-                        {"path": "11.jpg" , "mode": "single"},
-                        {"path": "12.jpg" , "mode": "single"},
-                        {"path": "13.jpg" , "mode": "single"},
-                        {"mode": "phrase", "lines" : [
-                            "Foto Producto",
-                            "Cliente: Ramon Cinturones"
-                        ]}
-                    ]
-                }
-            };
-            var sections = ['contact', 'portada','exibit', 'ginger-exibit', 'analogicas-exibit', 'woods-exibit', 'eucaliptus-exibit', 'producto-exibit', 'ellas-exibit', 'buenos_aires-exibit', 'alimentos-exibit', 'paloma-exibit', 'ramon-exibit' ];
-            var menus = ['contact_menu', 'projects_menu', 'portada_menu'];
-
-            function selectMenu(selectedElement) {
-                var selectedClass = "selected_menu";
-                for (var i in menus) {
-                    if (selectedElement.id === menus[i]) {
-                        selectedElement.classList.add(selectedClass);        
-                    } else {
-                        document.getElementById(menus[i]).classList.remove(selectedClass);
-                    }
-                }
-            }
-
-            function buildGallery(exibitId) {
-                var gallery = galleries[exibitId];
-                var galleryView = document.getElementById(exibitId + "-exibit");
-
-                if (galleryView.childElementCount < 1) {
-                    for (const element of gallery.images) {
-                        var node = document.createElement("DIV");
-                        for (const mode of element.mode.split(" ")) {
-                            node.classList.add(mode);
-                        }
-                        if (element.mode == "phrase") {
-                            var ul = document.createElement("UL");
-                            for (const line of element.lines) {
-                                var li = document.createElement("LI");
-                                li.innerText = line;
-                                ul.appendChild(li);
-                            }
-                            node.appendChild(ul);
-                        } else {
-                            var image = document.createElement("IMG");
-                            image.src = gallery.imageBasePath + element.path;
-                            image.alt = gallery.alt;
-                            node.appendChild(image);
-                        }
-                        galleryView.appendChild(node);
-                    }    
-                }
-            }
-
-            function currentSection() {
-                var selected = 'portada';
-                var sectionOnHash = window.location.hash.slice(1);
-                if (sectionOnHash) {
-                    return sectionOnHash;
-                }
-                return selected;
-            }
-
-            function isSectionDisplayed(id) {
-                return getComputedStyle(document.getElementById(id)).display !== "none";
-            }
-
-            function currentlyVisibleSection() {
-                for (var i in sections) {
-                    if (isSectionDisplayed(sections[i])) {
-                        return sections[i];
-                    }
-                }
-                return null;
-            }
-
-            function navigate(selectedElement) {
-                var section = currentSection();
-                if (!isSectionDisplayed(section)) {
-                    var current = currentlyVisibleSection();
-                    if (!current) {
-                        fadeInSelectedSection();
-                    } else {
-                        fadeOutSection(current);
-                    }
-                    
-                }
-            }
-
-            function fadeOutSection(id) {
-                var element = document.getElementById(id)
-                element.classList.remove("fade-in");
-                element.classList.add("fade-out");
-            }
-
-            function fadeInSelectedSection() {
-                var container = document.getElementById(currentSection());
-                if (container.id.includes("-exibit")) {
-                    container.style.display = "flex";
-                    buildGallery(container.id.slice(0, container.id.indexOf('-')));
-                } else {
-                    container.style.display = "block";
-                }
-                container.classList.remove("fade-out");
-                container.classList.add("fade-in");
-            }
-
-            document.addEventListener("DOMContentLoaded", function(e) {
-                for (var i in sections) {
-                    var section = document.getElementById(sections[i]);
-                    section.addEventListener('animationend', function(e) {
-                        if (this.classList.contains("fade-out")) {
-                            this.style.display = "none";
-                            window.scrollTo(0, 0);
-                            fadeInSelectedSection();
-                        }
-                    });
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('nav-menu').classList.remove('active');
                 }
             });
-            window.addEventListener('hashchange', navigate);
-            window.addEventListener('load', navigate);
-        </script>
-    </head>
-    <body>
-        <header>
-            <div id="title"><a id="portada_menu" href="#portada" onclick="selectMenu(this)">soledad rodriguez</a></div>
-            <div class="menu_container">
-                <ul class="menu">
-                    <li><a id="projects_menu" href="#exibit" onclick="selectMenu(this)">Proyectos</a></li>
-                    <li><a id="contact_menu" href="#contact" onclick="selectMenu(this)">Contacto</a></li>
-                </ul>
-            </div>
-        </header>
-        <div id="portada" class="fade-in" >
-            <div id="portada1-exibit">
-                <div class="portada-small portada-01"></div>
-                <div class="portada-small portada-03"></div>
-                <div class="portada-large portada-02"></div>
-                <div class="portada-large portada-04"></div>
-            </div>
-            <div id="portada2-exibit">
-                <div class="portada-05"></div>
-                <div class="portada-07"></div>
-                <div class="portada-09"></div>
-                <div class="portada-11"></div>
-                <div class="portada-06"></div>
-                <div class="portada-08"></div>
-                <div class="portada-10"></div>
-                <div class="portada-12"></div>
-                <div class="portada-13"></div>
-            </div>
-        </div>
-        <div id="exibit" class="fade-in" >
-            <div id="projects-exibit" class="projects">
-                <div class="project">
-                    <a href="#ginger-exibit" onclick="buildGallery('ginger')">
-                        <div class="projects-1"></div>
-                        <div class="project_name" >Ginger Jewerly</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#analogicas-exibit" onclick="buildGallery('analogicas')">
-                        <div class="projects-2"></div>
-                        <div class="project_name" >Analogicas</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#woods-exibit" onclick="buildGallery('woods')">
-                        <div class="projects-3"></div>
-                        <div class="project_name" >Into the woods</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#eucaliptus-exibit" onclick="buildGallery('eucaliptus')">
-                        <div class="projects-4"></div>
-                        <div class="project_name" >Eucaliptus</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#producto-exibit" onclick="buildGallery('producto')">
-                        <div class="projects-5"></div>
-                        <div class="project_name" >Producto</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#ellas-exibit" onclick="buildGallery('ellas')">
-                        <div class="projects-6"></div>
-                        <div class="project_name" >Ellas</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#paloma-exibit" onclick="buildGallery('paloma')">
-                        <div class="projects-9"></div>
-                        <div class="project_name" >Paloma Marquez</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#ramon-exibit" onclick="buildGallery('ramon')">
-                        <div class="projects-10"></div>
-                        <div class="project_name" >Ramon</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#buenos_aires-exibit" onclick="buildGallery('buenos_aires')">
-                        <div class="projects-7"></div>
-                        <div class="project_name" >Buenos Aires</div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="#alimentos-exibit" onclick="buildGallery('alimentos')">
-                        <div class="projects-8"></div>
-                        <div class="project_name" >Alimentos</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div id="contact" class="fade-in">
-            <div id="contact_c">
-                <div id="conact_image">
-                    <img class="conact_image" src="img/contact.jpg" alt="Contact" />
-                </div>
-                <div id="contact_details">
-                    <ul>
-                        <li>Foto + Arte</li>
-                        <li>Buenas Aires</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li><a href="mailto:hola@solerodriguez.com.ar" target="_blank" class="mail">hola@solerodriguez.com.ar</a></li>
-                        <li>&nbsp;</li>
-                        <li><a href="https://www.instagram.com/m.sole.rodriguez/" target="_blank" class="mail">instagram @m.sole.rodriguez</a></li>
-                    </ul>
-                </div>
-                <br/>
-                <br/>
-            </div>
-        </div>
-        <div id="ginger-exibit" class="exibit-gallery fade-in"></div>
-        <div id="analogicas-exibit" class="exibit-gallery fade-in"></div>
-        <div id="woods-exibit" class="exibit-gallery fade-in"></div>
-        <div id="eucaliptus-exibit" class="exibit-gallery fade-in"></div>
-        <div id="producto-exibit" class="exibit-gallery fade-in"></div>
-        <div id="ellas-exibit" class="exibit-gallery fade-in"></div>
-        <div id="buenos_aires-exibit" class="exibit-gallery fade-in"></div>
-        <div id="alimentos-exibit" class="exibit-gallery fade-in"></div>
-        <div id="paloma-exibit" class="exibit-gallery fade-in"></div>
-        <div id="ramon-exibit" class="exibit-gallery fade-in"></div>
-        <br/>
-        <br/>
-    </body>
-<html>
+        });
+    </script>
+</body>
+</html>
