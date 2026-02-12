@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Host+Grotesk:ital,wght@0,300;1,300&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
     <title>kalé kalé yoga</title>
-    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon-green.png" type="image/png">
     <style>
         * {
             margin: 0;
@@ -30,6 +30,15 @@
             padding: 0 20px;
         }
 
+        .centered-container {
+            text-align: center;
+        }
+
+        /* Ensure long-form text remains readable inside centered sections */
+        .centered-container p {
+            text-align: left;
+        }
+        
         header {
             background: rgba(103, 127, 87, 0.8);
             
@@ -67,7 +76,7 @@
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
-            
+            text-shadow: 2px 2px 4px #000000;
         }
 
         nav ul {
@@ -154,7 +163,7 @@
             font-size: 2rem;
             margin-bottom: 3rem;
             color: #2c3e50;
-            font-family: "Bodoni Moda", serif;
+            font-family: "Source Code Pro", monospace;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
@@ -165,6 +174,17 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             /*gap: 2rem;*/
             margin-bottom: 3rem;
+        }
+        
+        .spaced-grid {
+            display: block;
+            margin: auto;
+            width: 75%;
+            margin-bottom: 3rem;
+        }
+
+        .spaced-grid img {
+            width: 45%;
         }
 
         .card {
@@ -177,9 +197,15 @@
             text-align: center;
         }
 
+        .card a {
+            color: #4a4747;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
         .spaced-card{
-            margin-left: 4rem;
-            margin-right: 4rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
 
         .card img {
@@ -410,31 +436,33 @@
         <div class="container">
             <div class="grid">
                 <div class="card">
-                    <img src="img/yoga-integral.jpg" alt="Yoga Integral" style="width:100%; margin-bottom: 1rem;">
-                    <p>yoga integral</p>
+                    <a href="#yoga-integral">
+                        <img src="img/yoga-integral.jpg" alt="Yoga Integral" style="width:100%; margin-bottom: 1rem;">
+                        <p>yoga integral</p>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="img/yoga-nidra.jpg" alt="Yoga Nidra" style="width:100%; margin-bottom: 1rem;">
-                    <p>yoga nidra</p>
+                    <a href="#yoga-nidra">
+                        <img src="img/yoga-nidra.jpg" alt="Yoga Nidra" style="width:100%; margin-bottom: 1rem;">
+                        <p>yoga nidra</p>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="img/yoga-embarazo.jpg" alt="Yoga & Embarazo" style="width:100%; margin-bottom: 1rem;">
-                    <p>yoga & embarazo</p>
+                    <a href="#yoga-embarazo">
+                        <img src="img/yoga-embarazo.jpg" alt="Yoga & Embarazo" style="width:100%; margin-bottom: 1rem;">
+                        <p>yoga & embarazo</p>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="content-section" id="yoga-integral">
-        <div class="container">
-            <h2 class="section-title">Yoga integral</h2>
-            <div class="grid">
-                <div class="card spaced-card">
-                    <img src="img/yoga-integral-1.jpg" style="width:100%; margin-bottom: 1rem;">
-                </div>
-                <div class="card spaced-card">
-                    <img src="img/yoga-integral-2.jpg" style="width:100%; margin-bottom: 1rem;">
-                </div>
+        <div class="container centered-container">
+            <h2 class="section-title">yoga integral</h2>
+            <div class="spaced-grid">
+                <img src="img/yoga-integral-1.jpg" >
+                <img src="img/yoga-integral-2.jpg" >
             </div>
             <div class="section-content">
                 <p>Son prácticas dinámicas, donde el foco está puesto en la alineación, el estiramiento del cuerpo y la respiración.</p>
@@ -448,7 +476,7 @@
 
     <section class="content-section" id="yoga-nidra">
         <div class="container">
-            <h2 class="section-title">Yoga Nidra</h2>
+            <h2 class="section-title">yoga nidra</h2>
             <div class="section-content">
                 <p>Es una técnica de relajación y meditación profunda, conocida como el  “sueño yóguico”, ya que nos guía hacia un estado de conciencia entre la vigilia y el sueño.</p>
                 <p>Durante la práctica, el cuerpo permanece completamente relajado, mientras la mente se mantiene alerta y consciente.</p>
@@ -462,7 +490,7 @@
 
     <section class="content-section" id="yoga-embarazo">
         <div class="container">
-            <h2 class="section-title">Yoga & Embarazo</h2>
+            <h2 class="section-title">yoga & embarazo</h2>
             <div class="section-content">
                 <p>A medida que el yoga te conecta con tu cuerpo y tu mente, también despierta la conciencia del ser que habita en tu interior, profundizando ese lazo esencial haciéndolo más profundo.</p>
                 <p>Desde lo físico, se trabaja en la apertura de caderas, el suelo pélvico, las piernas y la espalda, acompañando los cambios propios del embarazo con suavidad y presencia.</p>
@@ -517,19 +545,15 @@
     </section>
 
     <section class="content-section" id="contacto">
-        <div class="container">
+        <div class="container centered-container">
             <h2 class="section-title">Contacto</h2>
-            <div class="grid">
-                <div class="card spaced-card">
-                    <img src="img/contacto-1.jpg" style="width:100%; margin-bottom: 1rem;">
-                </div>
-                <div class="card spaced-card">
-                    <img src="img/contacto-2.jpg" style="width:100%; margin-bottom: 1rem;">
-                </div>
+            <div class="spaced-grid">
+                <img src="img/contacto-1.jpg">
+                <img src="img/contacto-2.jpg">
             </div>
             <div class="section-content">
                 <p>Hola, mi nombre es Soledad. Soy Instructora de Yoga.</p>
-                <p>El yoga llegó a mi vida como una práctica física, pero con el tiempo se transformó en un espacio profundo de exploración, conexión interna y autoconocimiento.</p>
+                <p>El yoga llegó a mi vida como una práctica física, pero poco a poco se transformó en un espacio profundo de exploración, conexión interna y autoconocimiento.</p>
                 <p>Hace algunos años comencé a estudiar filosofía budista y meditación. Con el tiempo, esa mirada fue impregnando de manera natural mi forma de vivir y enseñar el yoga.</p>    
             </div>
         </div>
