@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Host+Grotesk:ital,wght@0,300;1,300&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
     <title>kalé kalé yoga</title>
-    <link rel="icon" href="img/favicon-green.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <style>
         * {
             margin: 0;
@@ -157,10 +157,10 @@
             padding: 4rem 0;
             background-color: #e2e0d9;
         }
-        
+
         .section-title {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1rem;
             margin-bottom: 3rem;
             color: #2c3e50;
             font-family: "Source Code Pro", monospace;
@@ -187,6 +187,25 @@
             width: 45%;
         }
 
+        .main-card {
+            position: relative;
+            text-align: center;
+        }
+
+        .centered-on-card {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
+            text-decoration-thickness: 1px;
+            text-shadow: 2px 2px 4px #000000;
+            font-size: larger;
+            width: 180px;
+        }
+
         .card {
             color: #4a4747;
             padding-bottom: 2rem;
@@ -199,7 +218,9 @@
 
         .card a {
             color: #4a4747;
-            text-decoration: none;
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
+            text-decoration-thickness: 1px;
             transition: opacity 0.3s;
         }
 
@@ -435,22 +456,22 @@
     <section class="content-section" id="tipos">
         <div class="container">
             <div class="grid">
-                <div class="card">
+                <div class="card main-card">
                     <a href="#yoga-integral">
                         <img src="img/yoga-integral.jpg" alt="Yoga Integral" style="width:100%; margin-bottom: 1rem;">
-                        <p>yoga integral</p>
+                        <div class="centered-on-card">yoga integral</div>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card main-card">
                     <a href="#yoga-nidra">
                         <img src="img/yoga-nidra.jpg" alt="Yoga Nidra" style="width:100%; margin-bottom: 1rem;">
-                        <p>yoga nidra</p>
+                        <div class="centered-on-card">yoga nidra</div>
                     </a>
                 </div>
-                <div class="card">
+                <div class="card main-card">
                     <a href="#yoga-embarazo">
                         <img src="img/yoga-embarazo.jpg" alt="Yoga & Embarazo" style="width:100%; margin-bottom: 1rem;">
-                        <p>yoga & embarazo</p>
+                        <div class="centered-on-card">yoga & embarazo</div>
                     </a>
                 </div>
             </div>
@@ -526,7 +547,7 @@
     
     <section class="content-section" id="espacio">
         <div class="container">
-            <h2 class="section-title">Espacio</h2>
+            <h2 class="section-title">espacio</h2>
             <div class="grid">
                 <div class="card">
                     <img src="img/espacio.jpg" style="width:100%; margin-bottom: 1rem;">
@@ -546,7 +567,7 @@
 
     <section class="content-section" id="contacto">
         <div class="container centered-container">
-            <h2 class="section-title">Contacto</h2>
+            <h2 class="section-title">contacto</h2>
             <div class="spaced-grid">
                 <img src="img/contacto-1.jpg">
                 <img src="img/contacto-2.jpg">
