@@ -34,14 +34,12 @@
             text-align: center;
         }
 
-        /* Ensure long-form text remains readable inside centered sections */
         .centered-container p {
             text-align: left;
         }
         
         header {
             background: rgba(103, 127, 87, 0.8);
-            
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -63,6 +61,7 @@
             font-weight: 200;
             font-style: normal;
         }
+
         .main-title {
             font-family: "Source Code Pro", monospace;
             font-optical-sizing: auto;
@@ -133,22 +132,6 @@
             font-size: 1.2rem;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
         .content-section {
             padding: 4rem 0;
         }
@@ -161,7 +144,7 @@
         .section-title {
             text-align: center;
             font-size: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             color: #2c3e50;
             font-family: "Source Code Pro", monospace;
             font-optical-sizing: auto;
@@ -235,7 +218,7 @@
             transition: opacity 0.3s;
         }
 
-        .spaced-card{
+        .spaced-card {
             margin-left: 1rem;
             margin-right: 1rem;
         }
@@ -282,7 +265,6 @@
             border-radius: 10px;
         }
 
-        /* Footer */
         footer {
             background-color: rgb(226, 224, 217);
             padding: 2rem 0;
@@ -306,8 +288,12 @@
             margin-bottom: 1rem;
         }
 
-        .footer-section ul {
+        .footer-section ol {
             list-style: none;
+        }
+
+        .footer-section li {
+            display: inline-block;
         }
 
         .footer-section a {
@@ -316,10 +302,9 @@
         }
 
         .footer-section a:hover {
-            color: green;
+            color: #3e583e;
         }
 
-        /* Tablet (768px - 1024px) */
         @media (max-width: 1024px) {
             .hero h1 {
                 font-size: 2rem;
@@ -337,12 +322,20 @@
                 margin-left: 1rem;
                 margin-right: 1rem;
             }
+
+            .footer-section {
+                line-height: 3rem;
+            }
+
         }
 
-        /* Tablet pequeña y móvil grande (481px - 768px) */
-        @media (max-width: 768px) {
+        @media (max-width: 770px) {
             header .container {
                 justify-content: space-between;
+            }
+
+            .container {
+                width: 85%;
             }
 
             .menu-toggle {
@@ -379,59 +372,16 @@
                 gap: 1.5rem;
             }
 
-            .section-title {
-                font-size: 1.5rem;
+            .spaced-grid img{
+                width: 49%;
             }
-            .spaced-card{
-                margin-left: 1rem;
-                margin-right: 1rem;
+            
+            .spaced-grid {
+                width: 100%;
             }
+
         }
 
-        /* Móvil (hasta 480px) */
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .hero {
-                padding: 2rem 0;
-            }
-
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-
-            .hero p {
-                font-size: 0.9rem;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-            }
-            .spaced-card{
-                margin-left: 0rem;
-                margin-right: 0rem;
-            }
-            .content-section {
-                padding: 2rem 0;
-            }
-
-            .btn {
-                padding: 0.6rem 1.5rem;
-                font-size: 0.9rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -566,11 +516,9 @@
     
     <section class="content-section" id="espacio">
         <div class="container">
-            <h2 class="section-title">espacio</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="img/espacio.jpg">
-                </div>
+            <h2 class="section-title">espacio</h2>            
+            <div class="card">
+                <img src="img/espacio.jpg">
             </div>
             <div class="section-content">
                 <p>Kalé Kalé es una expresión tibetana que significa “despacio, despacio”.</p>
@@ -603,7 +551,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    Barrio Graduados, Tandil | <a href="mailto:rodriguez.m.soledad27@gmail.com">rodriguez.m.soledad27@gmail.com</a> | <a href="https://wa.me/541168457242">Whatsapp: 1168457242</a>
+                    <ol>
+                        <li>Barrio Graduados, Tandil</li>
+                        <li><a href="mailto:rodriguez.m.soledad27@gmail.com">rodriguez.m.soledad27@gmail.com</a></li>
+                        <li><a href="https://wa.me/541168457242">Whatsapp: 1168457242</a></li>
+                    </ol>
                 </div>
             </div>
         </div>
