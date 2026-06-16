@@ -39,9 +39,9 @@
         }
         
         header {
-            background: rgba(142, 117, 77, 0.8);
+            background: rgba(197, 190, 159, 0.8);
             color: white;
-            padding: 1rem 0;
+            padding: 0.2rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -53,43 +53,26 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            font-family: "Helvetica Neue", Helvetica;
+            font-weight: 700;
+            font-optical-sizing: auto;
+            font-style: normal;
+            color: black;
         }
 
         .logo {
-            font-family: "Source Code Pro", monospace;
-            font-optical-sizing: auto;
-            font-weight: 200;
-            font-style: normal;
-        }
-
-        .main-title {
-            font-family: "Source Code Pro", monospace;
-            font-optical-sizing: auto;
-            font-weight: 200;
-            font-style: normal;
-            word-spacing: 20px;
-        }
-
-        .sub-text {
-            font-family: "Bodoni Moda", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            text-shadow: 2px 2px 4px #000000;
+            width: 100px;
+            margin-top: 10px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
             gap: 1.5rem;
-            font-family: "Source Code Pro", monospace;
-            font-optical-sizing: auto;
-            font-weight: 200;
-            font-style: normal;
         }
 
         nav a {
-            color: white;
+            color: black;
             text-decoration: none;
             transition: opacity 0.3s;
         }
@@ -105,32 +88,6 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
-        }
-
-        .hero {
-            background: url('img/background-header.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            padding-top: 4rem;
-            padding-bottom: 6rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .spacer {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
         }
 
         .content-section {
@@ -310,10 +267,6 @@
         }
 
         @media (max-width: 1024px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
             .grid {
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
@@ -363,14 +316,6 @@
                 display: flex;
             }
 
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
             .content-with-image {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -391,34 +336,19 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">kalé kalé yoga</div>
+            <div><img class="logo" src="img/logo.png" alt="kalé kalé yoga logo" /></div>
             <button class="menu-toggle" aria-label="Menú" onclick="toggleMenu()">☰</button>
             <nav>
                 <ul id="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#tipos">Yoga</a></li>
-                    <li><a href="#espacio">Espacio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#yoga">YOGA</a></li>
+                    <li><a href="#espacio">ESPACIO</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <div class="container">
-            <p class="spacer">&nbsp;</p>
-            <p class="spacer">&nbsp;</p>
-            <p class="spacer">&nbsp;</p>
-            <p class="spacer">&nbsp;</p>
-            <p class="spacer">&nbsp;</p>
-            <h1 class="main-title" >kalé kalé <strong><b>yoga</b></strong></h1>
-            <p class="sub-text">¨Toda práctica que  es  beneficiosa a largo plazo, lleva su tiempo.</p>
-            <p class="sub-text">Ten paciencia con el proceso¨</p>
-            
-        </div>
-    </section>
-
-    <section class="content-section" id="tipos">
+    <section class="content-section" id="yoga" >
         <div class="container">
             <div class="grid">
                 <div class="card main-card">
